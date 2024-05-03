@@ -1,0 +1,29 @@
+.standard-card-stars input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+  
+  .standard-card-stars label {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 6px;
+    height: 20px;
+    width: 20px;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='transparent' stroke='white' stroke-width='38' d='M259.216 29.942L330.27 173.92l158.89 23.087L374.185 309.08l27.145 158.23-142.114-74.698-142.112 74.698 27.146-158.23L29.274 197.007l158.89-23.088z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    font-size: 0;
+    cursor: pointer;
+  }
+  
+  .standard-card-stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
+  .standard-card-stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
+  .standard-card-stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
+  .standard-card-stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4),
+  .standard-card-stars input:nth-child(5):checked ~ label:nth-of-type(-n + 5) {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='white' stroke='white' stroke-width='38' d='M259.216 29.942L330.27 173.92l158.89 23.087L374.185 309.08l27.145 158.23-142.114-74.698-142.112 74.698 27.146-158.23L29.274 197.007l158.89-23.088z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+  
+  body {
+    padding-top: 50px;
+    text-align: center;
+  }
+  

@@ -1,0 +1,21 @@
+.standard-card {
+
+    /* Temp */
+    margin-left: 20px;
+
+    border: var(--border-width) var(--border-style) var(--border-color);
+    width: 250px;
+    height: 400px;
+    box-shadow: 2px 2px var(--border-color);
+
+}
+
+.standard-card-image {
+    border: var(--border-width) var(--border-style) var(--border-color);
+    width: 200px;
+    box-shadow: 2px 2px var(--border-color);
+}
+
+.standard-card-name {
+    color: var(--main-color);
+}

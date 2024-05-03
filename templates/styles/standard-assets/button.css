@@ -7,6 +7,8 @@
     padding-right: 7.5px;
     box-shadow: 2px 2px var(--border-color);
     font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
     color: var(--main-color);
     background: var(--main-background);
 }
