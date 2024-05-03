@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --background-color: #d7fcff;
+}
+
+body {
+  background: var(--background-color);
+}
+
+main {
+  margin-left: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.titleh1 {
+  color: #504b4b;
+  text-align: center;
+}
+
+.container {
+  border-radius: 20px;
+  width: 250px;
+  height: 450px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.top {
+  height: 65%;
+  background: #def5e5;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+}
+
+.people-img {
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.top-content {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.people-name {
+  font-size: 20px;
+  text-align: center;
+}
+
+.bottom {
+  height: 35%;
+  background: #bcead5;
+  border-radius: 0px 0px 20px 20px;
+  position: relative;
+}
+
+.bottom-content {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.checked {
+  color: orange;
+}
+
+.ratings {
+  display: flex;
+  justify-content: center;
+}
+
+.char {
+  font-size: 15px;
+}
+
+.voteButton {
+  border-radius: 20px;
+  padding: 5px;
+  width: 110px;
+}
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.popup-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup-range {
+  width: 100%;
+}
+
+.popup-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-button:hover {
+  background-color: #45a049;
+}
+
+.popup-hidden {
+  display: none;
+}
+
+.popup .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup .close:hover {
+  color: black;
+  text-decoration: none;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+    box-shadow: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
