@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
 
-    <title>cesco-leak</title>
+    <title>Cesco'Leak</title>
 
     <script defer src="scripts/script.js"></script>
 </head>
