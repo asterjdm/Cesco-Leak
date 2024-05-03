@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
 
-    <title>Cesco'Leak</title>
+    <title>CescoLeaks</title>
 
     <script defer src="scripts/script.js"></script>
 </head>
 
 <body>
     <header>
-        <h1 class="titleh1">The missing Cescole teacher monitoring</h1>
+        <h1 class="titleh1">CescoLeaks: The students' voice</h1>
     </header>
 
     <div id="ratingPopup" class="popup popup-hidden">
