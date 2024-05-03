@@ -80,7 +80,7 @@
                 <div class="container">
                     <div class="top">
                         <div class="top-content">
-                            <img src="' . $teacher["image"] . '" alt="image" class="people-img">
+                            <img src="' . $teacher["image"] . '" alt="" class="people-img">
                             <div class="people-name">
                                 <p>' . $teacher["name"] . '</p>
                             </div>
