@@ -1,0 +1,13 @@
+.standard-input {
+    border: var(--border-width) var(--border-style) var(--border-color);
+    padding-left: 4px;
+    font-size: 20px;
+    box-shadow: 2px 2px var(--border-color);
+    color: var(--main-color);
+    background: var(--main-background);
+
+}
+
+.standard-input:focus {
+    outline: none;
+}

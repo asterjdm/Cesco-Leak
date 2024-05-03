@@ -1,0 +1,10 @@
+.main-header {
+    border-bottom: var(--border-width) var(--border-style) var(--border-color);
+    padding-left: 10px;
+}
+
+.main-header-title {
+    font-size: 65px;
+    color: var(--main-color);
+    font-family: "Jersey20-Regular";
+}

@@ -1,0 +1,17 @@
+.standard-button {
+    /* Temp */
+    margin: 20px;
+
+    border: var(--border-width) var(--border-style) var(--border-color);
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    box-shadow: 2px 2px var(--border-color);
+    font-size: 20px;
+    color: var(--main-color);
+    background: var(--main-background);
+}
+
+.standard-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px;
+}

@@ -1,8 +1,31 @@
-/* Add fonts */
+@font-face {
+    font-family: Jersey20-Regular;
+    src: url(../fonts/Jersey20-Regular.ttf);
+}
+
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url(../fonts/SpaceGrotesk.ttf);
+}
+
+:root {
+    --main-background: #000000;
+    --main-color: #FFFFFF;
+
+    /* Borders */
+    --border-width: 2px;
+    --border-style: solid;
+    --border-color: white;
+}
 
 * {
     margin: 0;
     border: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "SpaceGrotesk";
+}
+
+body {
+    background-color: var(--main-background);
 }
