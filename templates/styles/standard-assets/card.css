@@ -12,10 +12,14 @@
 
 .standard-card-image {
     border: var(--border-width) var(--border-style) var(--border-color);
-    width: 200px;
+    width: 150px;
     box-shadow: 2px 2px var(--border-color);
 }
 
 .standard-card-name {
     color: var(--main-color);
+}
+
+.standart-card-stars-text {
+    margin-bottom: -15px;
 }
