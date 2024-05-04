@@ -1,7 +1,4 @@
 .standard-button {
-    /* Temp */
-    margin: 20px;
-
     border: var(--border-width) var(--border-style) var(--border-color);
     padding-left: 7.5px;
     padding-right: 7.5px;
