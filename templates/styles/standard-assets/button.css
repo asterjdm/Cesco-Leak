@@ -8,6 +8,7 @@
     text-transform: uppercase;
     color: var(--main-color);
     background: var(--main-background);
+    user-select: none;
 }
 
 .standard-button:active {

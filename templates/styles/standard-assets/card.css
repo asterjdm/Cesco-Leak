@@ -10,6 +10,7 @@
     width: 250px;
     height: 400px;
     box-shadow: 2px 2px var(--border-color);
+    user-select: none;
 }
 
 .standard-card-top {
@@ -27,12 +28,14 @@
     height: 100px;
     object-fit: cover;
     box-shadow: 2px 2px var(--border-color);
+    user-select: none;
 }
 
 .standard-card-name {
     font-size: 20px;
     text-transform: uppercase;
     color: var(--main-color);
+    user-select: all;
 }
 
 .standard-card-top-right-button {
@@ -69,6 +72,8 @@
     transform: translateX(-1px);
     font-size: 18px;
     text-transform: uppercase;
+    user-select: all;
+
 }
 
 .standard-card-button {
