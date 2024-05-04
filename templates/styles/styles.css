@@ -36,3 +36,34 @@
 body {
     background-color: var(--main-background);
 }
+
+
+main {
+    margin: 20px auto;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 794px;
+}
+
+@media screen and (min-width: 1066px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        width: 1066px;
+    }
+}
+
+
+@media screen and (max-width: 833px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        width: 522px;
+    }
+}
+
+@media screen and (max-width: 521px) {
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        width: 250px;
+    }
+}

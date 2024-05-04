@@ -1,8 +1,4 @@
 .standard-card {
-    /* Temp */
-    margin-left: 20px;
-    margin-top: 20px;
-    /* Temp */
 
     border: var(--border-width) var(--border-style) var(--border-color);
     padding: 10px;
