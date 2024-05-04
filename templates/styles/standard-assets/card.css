@@ -1,11 +1,10 @@
 .standard-card {
-
     border: var(--border-width) var(--border-style) var(--border-color);
     padding: 10px;
     position: relative;
     width: 250px;
     height: 400px;
-    box-shadow: 2px 2px var(--border-color);
+    box-shadow: var(--border-width) var(--border-width) var(--border-color);
     user-select: none;
 }
 
@@ -23,7 +22,7 @@
     width: 100px;
     height: 100px;
     object-fit: cover;
-    box-shadow: 2px 2px var(--border-color);
+    box-shadow: var(--border-width) var(--border-width) var(--border-color);
     user-select: none;
 }
 
@@ -69,7 +68,6 @@
     font-size: 18px;
     text-transform: uppercase;
     user-select: all;
-
 }
 
 .standard-card-button {
