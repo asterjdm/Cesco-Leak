@@ -9,6 +9,7 @@
     color: var(--main-color);
     background: var(--main-background);
     user-select: none;
+    cursor: pointer;
 }
 
 .standard-button:active {
