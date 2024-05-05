@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header.css">
 
     <!-- Standard assets -->
     <link rel="stylesheet" href="./styles/standard-assets/button.css">
     <link rel="stylesheet" href="./styles/standard-assets/input.css">
+    <link rel="stylesheet" href="./styles/standard-assets/popup.css">
     <link rel="stylesheet" href="./styles/standard-assets/card.css">
 
+    <!-- Scripts -->
     <script src="./scripts/scripts.js" defer></script>
+    <script src="./scripts/popup.js" defer></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -26,7 +32,7 @@
             <img  class="main-header-search-img" src="./images/search.png" alt="search icon">
         </div>
 
-        <button class="standard-button main-header-button">
+        <button class="standard-button main-header-button" onclick="openPopup('addPopup')">
             <p class="main-header-button-text">Ajouter un prof</p>
             <img class="main-header-button-img" src="./images/plus.png" alt="plus icon">
         </button>
@@ -124,5 +130,20 @@
             <div class="standard-button standard-card-button">Lire les avis</div>
         </div>
     </main>
+
+    <!-- Popups -->
+    <div id="addPopup" class="standard-popup">
+        <button class="standard-button standard-popup-close" onclick="closePopup('addPopup')">
+            <img class="standard-popup-close-img" src="./images/close.svg" alt="close icon">
+        </button>
+        <div class="standard-popup-content add-popup">
+            <div class="select-image">
+                <input id="uploadPhoto" class="upload-photo" type="file">
+                <img id="previewImage" class="preview-image" src="./images/upload.png">
+            </div>
+            <input class="standard-input insert-name" type="text" placeholder="Entrer un nom">
+            <button class="standard-button send-request">Envoyer</button>
+        </div>
+    </div>
 </body>
 </html>

@@ -3,9 +3,9 @@
     padding-left: 4px;
     font-size: 20px;
     box-shadow: var(--border-width) var(--border-width) var(--border-color);
+    text-transform: uppercase;
     color: var(--main-color);
     background: var(--main-background);
-
 }
 
 .standard-input:focus {
