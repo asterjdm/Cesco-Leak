@@ -63,7 +63,16 @@ main {
 
 @media screen and (max-width: 521px) {
     main {
+        padding-bottom: 205px;
         grid-template-columns: repeat(1, 1fr);
         width: 250px;
+        gap: 195px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    main {
+        padding-bottom: 155px;
+        gap: 155px;
     }
 }
