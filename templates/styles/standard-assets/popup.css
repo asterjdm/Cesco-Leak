@@ -25,24 +25,29 @@
 }
 
 .standard-popup-content {
-    border-radius: var(--border-radius);
+    border: var(--border-width) var(--border-style) var(--border-color);
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    box-shadow: var(--border-width) var(--border-width) var(--border-color);
     overflow-y: hidden;
     scrollbar-width: none;
     z-index: 2;
+    background: var(--main-background);
 }
 
 .standard-popup-content.add-popup {
-    border: var(--border-width) var(--border-style) var(--border-color);
     width: 250px;
     height: 330px;
-    box-shadow: var(--border-width) var(--border-width) var(--border-color);
-    background: var(--main-background);
+}
+
+.standard-popup-content.comment-popup {
+    padding: 20px;
+    width: 800px;
+    height: 500px;
 }
 
 .standard-popup-close {
@@ -52,14 +57,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(150px, -190px); /* Adjusted for focus */
     z-index: 3;
 }
 
-.standard-popup-close:active {
-    transform: translate(152px, -188px); /* Adjusted for focus */
+.standard-popup-close.add-popup {
+    transform: translate(150px, -190px); /* Adjusted for focus */
 }
 
+.standard-popup-close.add-popup:active {
+    transform: translate(152px, -188px); /* Adjusted for focus */
+}
 
 .standard-popup-close-img {
     width: 35px;
@@ -96,6 +103,43 @@
     width: calc(100% - 40px);
 }
 
+.standard-popup-content-messages, .standard-popup-content-send-messages {
+    width: 100%;
+}
+
+.standard-popup-content-messages {
+    background: blue;
+    height: 100%;
+}
+
+.standard-popup-content-send-messages {
+    background: red;
+    display: flex;
+    gap: 20px;
+}
+
+.standard-button.send-message, .standard-input.send-message {
+    height: 45px;
+}
+
+.standard-input.send-message {
+    padding-left: 10px;
+    width: 100%;
+    text-transform: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .standard-popup-content.comment-popup {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .standard-popup-content.comment-popup {
+        transform: scale(0.7);
+    }
+}
+
 @media screen and (max-width: 521px) {
     .standard-popup-content.add-popup {
         width: 100dvw;
@@ -114,6 +158,10 @@
 
     .standard-popup-close:active {
         transform: translate(2px, 2px);
+    }
+
+    .standard-popup-close-img {
+        width: 50px;
     }
 
     .select-image {
