@@ -98,8 +98,8 @@
 
 @media screen and (max-width: 521px) {
     .standard-popup-content.add-popup {
-        width: 100%;
-        height: 100%;
+        width: 100dvw;
+        height: 100dvh;
         box-shadow: 0;
     }
 
@@ -127,10 +127,6 @@
 
     .insert-name {
         padding-left: 10px;
-    }
-
-    .insert-name:focus ~ .standard-popup-content.add-popup {
-        height: 100%;
     }
 }
 
