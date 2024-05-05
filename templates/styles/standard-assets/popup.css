@@ -52,13 +52,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(150px, -190px);
+    transform: translate(150px, -190px); /* Adjusted for focus */
     z-index: 3;
 }
 
-.standard-popup-close:focus {
-    transform: translate(152px, -188px);
+.standard-popup-close:active {
+    transform: translate(152px, -188px); /* Adjusted for focus */
 }
+
 
 .standard-popup-close-img {
     width: 35px;
@@ -111,7 +112,7 @@
         transform: translate(0px, 0px);
     }
 
-    .standard-popup-close:focus {
+    .standard-popup-close:active {
         transform: translate(2px, 2px);
     }
 
