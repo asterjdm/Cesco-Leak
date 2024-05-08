@@ -1,5 +1,6 @@
 const imageInput = document.getElementById('uploadPhoto');
 const previewImage = document.getElementById('previewImage');
+const standardPopupCotentMessages = document.getElementById('standardPopupCotentMessages')
 
 imageInput.addEventListener('change', function(event) {
     const file = event.target.files[0];
@@ -13,3 +14,7 @@ imageInput.addEventListener('change', function(event) {
         previewImage.src = '#';
     }
 });
+
+window.onload = function() {
+    standardPopupCotentMessages.scrollTop = standardPopupCotentMessages.scrollHeight;
+};
