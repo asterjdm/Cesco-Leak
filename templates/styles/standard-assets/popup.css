@@ -214,12 +214,12 @@
     }
     
     .standard-button.send-message, .standard-input.send-message {
-        height: 70px;
-        font-size: 25px;
+        height: 60px;
+        font-size: 20px;
     }
 
     .message {
-        font-size: 30px;
+        font-size: 25px;
         flex-direction: column;
     }
 }
