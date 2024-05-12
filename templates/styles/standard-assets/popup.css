@@ -163,6 +163,13 @@
     .standard-popup-close {
         top: 20px;
         right: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .standard-popup-close-img {
+        width: 45px;
+        height: 45px;
     }
 
     .select-image {
