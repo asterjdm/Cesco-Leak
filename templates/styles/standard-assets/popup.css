@@ -169,7 +169,6 @@
     .standard-popup {
         width: 1000%;
         height: 1000%;
-
     }
 
     .standard-popup-content.add-popup {
@@ -184,7 +183,7 @@
         box-shadow: none;
     }
 
-    .standard-popup-close.add-popup {
+    .standard-popup-close.add-popup, .standard-popup-close.comment-popup {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -193,7 +192,7 @@
         transform: translate(0px, 0px);
     }
 
-    .standard-popup-close.add-popup:active {
+    .standard-popup-close.add-popup:active, .standard-popup-close.comment-popup {
         transform: translate(2px, 2px);
     }
 
@@ -212,6 +211,16 @@
 
     .insert-name {
         padding-left: 10px;
+    }
+    
+    .standard-button.send-message, .standard-input.send-message {
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .message {
+        font-size: 30px;
+        flex-direction: column;
     }
 }
 
