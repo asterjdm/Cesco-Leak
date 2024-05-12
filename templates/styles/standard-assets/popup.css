@@ -141,23 +141,51 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .standard-popup-content.comment-popup {
+    .whole-section.comment-popup {
         transform: scale(0.8);
     }
 }
 
 @media screen and (max-width: 850px) {
-    .standard-popup-content.comment-popup {
+    .whole-section.comment-popup {
         transform: scale(0.7);
     }
 }
 
-@media screen and (max-width: 521px) {
-    .standard-popup-content.add-popup, .standard-popup-content.comment-popup {
+@media screen and (max-width: 675px) {
+    .whole-section.comment-popup {
+        transform: scale(1);
+    }
+
+    .standard-popup-content.comment-popup {
         width: 100dvw;
         height: 100dvh;
         box-shadow: none;
-        transform: scale(1);
+    }
+
+    .standard-popup-close {
+        top: 21.5px;
+        right: 23.5px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .standard-popup-close-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .standard-popup-content-messages {
+        margin-top: 75px;
+    } 
+
+}
+
+@media screen and (max-width: 521px) {
+    .standard-popup-content.add-popup {
+        width: 100dvw;
+        height: 100dvh;
+        box-shadow: none;
     }
 
     .standard-popup-close {
@@ -186,8 +214,8 @@
     }
     
     .standard-button.send-message, .standard-input.send-message {
-        height: 80px;
-        font-size: 30px;
+        height: 70px;
+        font-size: 25px;
     }
 
     .message {
