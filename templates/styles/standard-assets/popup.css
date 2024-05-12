@@ -173,7 +173,8 @@
 }
 
 .score-value p {
-    font-size: 20px
+    font-size: 20px;
+    width: 15px;
 }
 
 .save-ratings {
@@ -222,6 +223,10 @@
     
     .score {
         gap: 5px;
+    }
+
+    .score-title {
+        font-size: 25px;
     }
 
     .value {
