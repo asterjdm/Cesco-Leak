@@ -162,7 +162,6 @@
     .standard-popup-close.comment-popup {
         transform: translate(310px, -200px);
     }
-
 }
 
 @media screen and (max-width: 521px) {
@@ -224,6 +223,8 @@
     }
 }
 
+
+/* Fade in/out aniamtions for popups */
 @keyframes fade-in {
     0% {
         opacity: 0;
