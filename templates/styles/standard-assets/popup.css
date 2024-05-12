@@ -205,14 +205,14 @@
         box-shadow: none;
     }
 
-    .standard-popup-close {
+    .standard-popup-close.other, .standard-popup-close.comment-popup {
         top: 21.5px;
         right: 23.5px;
         width: 60px;
         height: 60px;
     }
 
-    .standard-popup-close-img {
+    .standard-popup-close-img.other, .standard-popup-close.comment-popup {
         width: 45px;
         height: 45px;
     }
