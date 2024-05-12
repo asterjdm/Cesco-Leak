@@ -136,16 +136,18 @@
 
     <!-- Popups -->
     <div id="addPopup" class="standard-popup">
-        <button class="standard-button standard-popup-close add-popup" onclick="closePopup('addPopup')">
-            <img class="standard-popup-close-img" draggable="false" src="./images/close.svg" alt="close icon">
-        </button>
-        <div class="standard-popup-content add-popup">
-            <div class="select-image">
-                <input id="uploadPhoto" class="upload-photo" type="file">
-                <img id="previewImage" class="preview-image" src="./images/upload.png">
+        <div class="whole-section">
+            <button class="standard-button standard-popup-close add-popup" onclick="closePopup('addPopup')">
+                <img class="standard-popup-close-img" draggable="false" src="./images/close.svg" alt="close icon">
+            </button>   
+            <div class="standard-popup-content add-popup">
+                <div class="select-image">
+                    <input id="uploadPhoto" class="upload-photo" type="file">
+                    <img id="previewImage" class="preview-image" src="./images/upload.png">
+                </div>
+                <input class="standard-input insert-name" type="text" placeholder="Entrer un nom">
+                <button class="standard-button send-request">Envoyer</button>
             </div>
-            <input class="standard-input insert-name" type="text" placeholder="Entrer un nom">
-            <button class="standard-button send-request">Envoyer</button>
         </div>
     </div>
     <div id="commentPopup" class="standard-popup">
