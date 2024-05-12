@@ -48,7 +48,7 @@
     height: 330px;
 }
 
-.standard-popup-content.comment-popup {
+.standard-popup-content.comment-popup, .standard-popup-content.rating-popup {
     padding: 20px;
     width: 800px;
     height: 500px;
@@ -140,24 +140,65 @@
     text-transform: none;
 }
 
+.score {
+    display: flex;
+    flex-direction: column;
+}
+
+.score-title {
+    font-size: 20px
+}
+
+.value {
+    -webkit-appearance: none;
+    width: 600px;
+    height: 15px;
+    background:white;
+}
+ 
+.value::-moz-range-thumb, .score-value::-webkit-slider-thumb {
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: 0px;
+    width: 25px;
+    height: 25px;
+    box-shadow: var(--border-width) var(--border-width) var(--border-color);
+    background: black;
+    cursor: pointer;
+}
+
+.score-value {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.score-value p {
+    font-size: 20px
+}
+
+.save-ratings {
+    width: 617px;
+    font-size: 25px;
+}
+
 @media screen and (max-width: 1000px) {
-    .whole-section.comment-popup {
+    .whole-section.comment-popup, .whole-section.rating-popup {
         transform: scale(0.8);
     }
 }
 
 @media screen and (max-width: 850px) {
-    .whole-section.comment-popup {
+    .whole-section.comment-popup, .whole-section.rating-popup {
         transform: scale(0.7);
     }
 }
 
 @media screen and (max-width: 675px) {
-    .whole-section.comment-popup {
+    .whole-section.comment-popup, .whole-section.rating-popup {
         transform: scale(1);
     }
 
-    .standard-popup-content.comment-popup {
+    .standard-popup-content.comment-popup, .standard-popup-content.rating-popup {
         width: 100dvw;
         height: 100dvh;
         box-shadow: none;
@@ -176,9 +217,28 @@
     }
 
     .standard-popup-content-messages {
-        margin-top: 75px;
+        margin-top: 75px
     } 
+    
+    .score {
+        gap: 5px;
+    }
 
+    .value {
+        width: 80vw;
+        height: 30px;
+    }
+
+    .value::-moz-range-thumb, .score-value::-webkit-slider-thumb {
+        width: 40px;
+        height: 40px;
+    }
+
+    .save-ratings {
+        width: calc(80vw + 15px);
+        transform: translateX(-2px);
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 521px) {

@@ -48,7 +48,7 @@
                 <img class="standard-card-image" src="./template-images/image.jpg" alt="undefined">
                 <div class="standard-card-top-right">
                     <h1 class="standard-card-name">Mathieu Raetz</h1>
-                    <button class="standard-button standard-card-top-right-button">Voter</button>
+                    <button class="standard-button standard-card-top-right-button" onclick="openPopup('ratingPopup')">Voter</button>
                 </div>
             </div>
             <!-- Ratings -->
@@ -150,6 +150,7 @@
             </div>
         </div>
     </div>
+
     <div id="commentPopup" class="standard-popup">
         <div class="whole-section comment-popup">
             <button class="standard-button standard-popup-close comment-popup" onclick="closePopup('commentPopup')">
@@ -226,5 +227,47 @@
             </div>
         </div>
     </div>
+
+    <div id="ratingPopup" class="standard-popup">
+        <div class="whole-section rating-popup">
+            <button class="standard-button standard-popup-close comment-popup" onclick="closePopup('ratingPopup')">
+                <img class="standard-popup-close-img" draggable="false" src="./images/close.svg" alt="close icon">
+            </button>
+            <div class="standard-popup-content rating-popup">
+                <div class="score">
+                    <p class="score-title">Autorité</p>
+                    <div class="score-value">
+                        <input id="ratingValue1" class="value" type="range" min="0" max="5" value="3">
+                        <p id="ratingText1">3</p>
+                    </div>
+                </div>
+                <div class="score">
+                    <p class="score-title">Humour</p>
+                    <div class="score-value">
+                        <input id="ratingValue2" class="value" type="range" min="0" max="5" value="3">
+                        <p id="ratingText2">3</p>
+                    </div>
+                </div>
+                <div class="score">
+                    <p class="score-title">Qualité d'enseignement</p>
+                    <div class="score-value">
+                        <input id="ratingValue3" class="value" type="range" min="0" max="5" value="3">
+                        <p id="ratingText3">3</p>
+                    </div>
+                </div>
+                <div class="score">
+                    <p class="score-title">Gentilesse</p>
+                    <div class="score-value">
+                        <input id="ratingValue4" class="value" type="range" min="0" max="5" value="3">
+                        <p id="ratingText4">3</p>
+                    </div>
+                </div>
+                <div class="standard-button save-ratings">Enregistrer</div>
+            </div>  
+        </div>
+    </div>
+    
+
+
 </body>
 </html>
