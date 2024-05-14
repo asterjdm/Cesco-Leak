@@ -156,7 +156,19 @@
     background:white;
 }
  
-.value::-moz-range-thumb, .score-value::-webkit-slider-thumb {
+.value::-moz-range-thumb, .value::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: 0px;
+    width: 25px;
+    height: 25px;
+    box-shadow: var(--border-width) var(--border-width) var(--border-color);
+    background: black;
+    cursor: pointer;
+}
+
+.value::-webkit-slider-thumb {
+    -webkit-appearance: none;
     border: var(--border-width) var(--border-style) var(--border-color);
     border-radius: 0px;
     width: 25px;
