@@ -1,5 +1,4 @@
 const profCardsEmp = document.getElementById("profCards");
-var htmlResult = "";
 
 function getStarsHtml(n) {
   let starsHtml = "";
@@ -9,8 +8,8 @@ function getStarsHtml(n) {
   return starsHtml;
 }
 
-getTeachers().then(function (teachers) {
-  console.log(teachers);
+function addTeachers(teachers) {
+  let htmlResult = "";
   teachers.forEach((teacher) => {
     console.log(teacher);
     htmlResult += /*html*/ `
@@ -77,4 +76,8 @@ getTeachers().then(function (teachers) {
   });
 
   profCardsEmp.innerHTML = htmlResult;
+}
+
+getTeachers("").then(function (teachers) {
+  addTeachers(teachers);
 });

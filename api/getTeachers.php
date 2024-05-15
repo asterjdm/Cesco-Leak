@@ -1,15 +1,18 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+
 
 header('Content-type: application/json');
 
 include_once(dirname(__FILE__) . "/database.php");
 
-$db = new Database;
+$searchQuery = $_GET["searchQuery"];
 
-$teachers = $db->select("SELECT * FROM cescoleaks_teachers");
+$db = new Database;
+if(isset($searchQuery)){
+    $teachers = $db->select("SELECT * FROM cescoleaks_teachers WHERE name LIKE '%$searchQuery%'");
+}else {
+    $teachers = $db->select("SELECT * FROM cescoleaks_teachers");
+}
 
 foreach ($teachers as &$teacher) {
     $votesData = $db->select("SELECT * FROM cescoleaks_votes WHERE teacher_ID = '{$teacher["ID"]}'");
