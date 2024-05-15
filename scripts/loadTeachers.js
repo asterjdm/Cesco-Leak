@@ -2,9 +2,14 @@ const profCardsEmp = document.getElementById("profCards");
 
 function getStarsHtml(n) {
   let starsHtml = "";
-  for (let i = 0; i < 10; i++) {
-    if (i <= n) {
-      starsHtml += /*html*/ `<label class='star star-full'></label>`;
+  const fullStars = Math.floor(n / 2);
+  const hasHalfStar = n % 2 !== 0;
+
+  for (let i = 0; i < 5; i++) {
+    if (i < fullStars) {
+      starsHtml += `<label class='star star-full'></label>`;
+    } else if (i === fullStars && hasHalfStar) {
+      starsHtml += `<label class='star star-half'></label>`;
     } else {
       starsHtml += "<label class='star'></label>";
     }
