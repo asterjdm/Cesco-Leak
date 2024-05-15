@@ -1,5 +1,4 @@
 name: FTP Deployment
-
 on:
   push:
 
