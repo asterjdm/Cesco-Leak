@@ -1,13 +1,11 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+
 
 header('Content-type: application/json');
 
 include_once(dirname(__FILE__) . "/database.php");
 
-$searchQuery = $_POST["searchQuery"];
+$searchQuery = $_GET["searchQuery"];
 
 $db = new Database;
 if(isset($searchQuery)){
