@@ -45,5 +45,6 @@ if(count($sameUserVotes) >= 1){
 $db->query("INSERT INTO cescoleaks_votes (teacher_ID, IP, teaching_quality, kindness, authority, humor) VALUES 
             ('$teacherId', '$hashedIp', '$teachingQualityRating', '$kindnessRating', '$authorityRating', '$humorRating')");
 
+echo json_encode(array());
 exit(); // we never know
 ?>
