@@ -2,8 +2,12 @@ const profCardsEmp = document.getElementById("profCards");
 
 function getStarsHtml(n) {
   let starsHtml = "";
-  for (let i = 0; i < n; i++) {
-    starsHtml += "<label></label>";
+  for (let i = 0; i < 10; i++) {
+    if (i <= n) {
+      starsHtml += /*html*/ `<label class='star star-full'></label>`;
+    } else {
+      starsHtml += "<label class='star'></label>";
+    }
   }
   return starsHtml;
 }
