@@ -20,7 +20,9 @@
 
     <!-- Scripts -->
     <script src="./scripts/loadTeachers.js" defer></script>
-    <script src="./scripts/utils/getTeachers.js"></script>
+    <script src="./scripts/utils/objectToFormData.js"></script>
+    <script src="./scripts/getTeachers.js"></script>
+    <script src="./scripts/rating.js"></script>
     <script src="./scripts/popup.js" defer></script>
 
     <title>CESCO LEAK</title>
@@ -112,32 +114,32 @@
                 <div class="score">
                     <p class="score-title">Autorité</p>
                     <div class="score-value">
-                        <input id="ratingValue1" class="value" type="range" min="0" max="5" value="3">
-                        <p id="ratingText1">3</p>
+                        <input id="ratingAuthority" class="value" type="range" min="1" max="10" value="5>
+                        <p id=" ratingText1">3</p>
                     </div>
                 </div>
                 <div class="score">
                     <p class="score-title">Humour</p>
                     <div class="score-value">
-                        <input id="ratingValue2" class="value" type="range" min="0" max="5" value="3">
+                        <input id="ratingHumor" class="value" type="range" min="1" max="10" value="5">
                         <p id="ratingText2">3</p>
                     </div>
                 </div>
                 <div class="score">
                     <p class="score-title">Qualité d'enseignement</p>
                     <div class="score-value">
-                        <input id="ratingValue3" class="value" type="range" min="0" max="5" value="3">
+                        <input id="ratingTeachingQuality" class="value" type="range" min="1" max="10" value="5">
                         <p id="ratingText3">3</p>
                     </div>
                 </div>
                 <div class="score">
                     <p class="score-title">Gentilesse</p>
                     <div class="score-value">
-                        <input id="ratingValue4" class="value" type="range" min="0" max="5" value="3">
+                        <input id="ratingKindness" class="value" type="range" min="1" max="10" value="5">
                         <p id="ratingText4">3</p>
                     </div>
                 </div>
-                <div class="standard-button save-ratings">Enregistrer</div>
+                <button id="voteRatingButton" class="standard-button save-ratings">Voter</button>
             </div>
         </div>
     </div>
