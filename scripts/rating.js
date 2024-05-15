@@ -11,8 +11,9 @@ async function sendVotes(profId, teachingQuality, kindness, authority, humor) {
       humor: humor,
     }),
   });
-
-  if (response.json().info == "vote updated") {
+  let responseJson = await response.json();
+  console.log(responseJson);
+  if (responseJson.info == "vote updated") {
     alert("Votre vote a été mis a jour");
   }
 }
