@@ -43,8 +43,6 @@
     <main id="main">
         <?php
 
-        $jsonData = file_get_contents('teachers_data.json');
-        $teachers = json_decode($jsonData, true);
         foreach ($teachers as $teacher) {
             $charPTeachingQuality = "";
             $charPkidness = "";
