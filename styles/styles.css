@@ -45,6 +45,12 @@ main {
     width: 794px;
 }
 
+.main-footer {
+    padding: 10px;
+    height: 50px;
+    border-top: var(--border-width) var(--border-style) var(--border-color);
+}
+
 @media screen and (min-width: 1066px) {
     main {
         grid-template-columns: repeat(4, 1fr);
