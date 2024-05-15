@@ -30,3 +30,9 @@ window.onload = function () {
   standardPopupContentMessages.scrollTop =
     standardPopupContentMessages.scrollHeight;
 };
+
+document.getElementById("searchBar").addEventListener("input", (e) => {
+  getTeachers(e.target.value).then(function (teachers) {
+    addTeachers(teachers);
+  });
+});
