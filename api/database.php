@@ -4,7 +4,7 @@ class Database {
 
     private $conn;
     public function __construct() {
-        include_once(dirname(__FILE__) . "/../secrets.php");
+        include_once(dirname(__FILE__) . "/secrets.php");
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
         if ($this->conn->connect_error) {
