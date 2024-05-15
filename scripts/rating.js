@@ -12,5 +12,7 @@ async function sendVotes(profId, teachingQuality, kindness, authority, humor) {
     }),
   });
 
-  console.log(response);
+  if (response.json().info == "vote updated") {
+    alert("Votre vote a été mis a jour");
+  }
 }
