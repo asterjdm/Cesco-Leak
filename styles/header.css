@@ -20,7 +20,7 @@
 
 .main-header-search {
     border: var(--border-width) var(--border-style) var(--border-color);
-    width: calc(100% - 555px);
+    width: calc(100% - 563px);
     display: flex;
     box-shadow: var(--border-width) var(--border-width) var(--border-color);
 }
@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 800px) {
     .main-header-search {
-        width: calc(100% - 405px);
+        width: calc(100% - 417px);
     }
     
     .main-header-button {
