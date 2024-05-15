@@ -9,4 +9,6 @@ for ($i=0; $i < count(EMAILS); $i++) {
     mail(EMAILS[$i], "CESCOLEAKS Teacher request", $msg);
 }
 
+header("location: ../index.html");
+
 ?>
