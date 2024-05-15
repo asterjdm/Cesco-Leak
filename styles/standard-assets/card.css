@@ -38,6 +38,10 @@
   width: 100%;
 }
 
+.standard-card-stars {
+  margin-top: 13px;
+}
+
 .star {
   box-sizing: border-box;
   display: inline-block;
