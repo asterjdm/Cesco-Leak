@@ -9,6 +9,19 @@ function getStarsHtml(n) {
 }
 
 function addTeachers(teachers) {
+  let mdrr = [
+    "Francoi holland",
+    "Le bon vieu Staline",
+    "Donald Trump",
+    "Ta grand mère",
+    "Vlad Poutine",
+    "Macron",
+    "Satoshie Nakamoto",
+    "Ton grand père",
+    "Ta mère",
+    "Ton père",
+  ];
+
   let htmlResult = "";
   teachers.forEach((teacher) => {
     console.log(teacher);
@@ -18,7 +31,8 @@ function addTeachers(teachers) {
           <img
             class="standard-card-image"
             src="${teacher.image_url}"
-            alt="undefined"
+            onerror="this.onerror=null; this.src='images/default.png'"
+            alt=${mdrr[Math.floor(Math.random() * mdrr.length)]}
           />
           <div class="standard-card-top-right">
             <h1 class="standard-card-name">${teacher.name}</h1>
