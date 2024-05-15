@@ -154,6 +154,7 @@
     width: 600px;
     height: 15px;
     background:white;
+    border-radius: 0;
 }
  
 .value::-moz-range-thumb {
