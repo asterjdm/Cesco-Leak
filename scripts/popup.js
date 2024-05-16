@@ -36,6 +36,18 @@ function openRatingPopup(popupId, profId) {
   });
 }
 
+function onCommentSend(profId) {
+  sendComment(
+    document.getElementById("commentContentInput").value,
+    profId
+  ).then(() => {
+    getComments(profId).then(function (comments) {
+      loadComments(comments);
+    });
+    document.getElementById("commentContentInput").value = "";
+  });
+}
+
 function openCommentsPopup(popupId, profId) {
   openPopup(popupId);
 
@@ -47,48 +59,14 @@ function openCommentsPopup(popupId, profId) {
 
   const sendCommentButton = document.getElementById("sendCommentButton");
   const sendCommentInput = document.getElementById("commentContentInput");
-  console.log(sendCommentInput.value);
-  sendCommentInput.addEventListener("input", function (e) {
-    alert(e.key);
+
+  sendCommentInput.addEventListener("keyup", function (e) {
     if (e.key == "Enter") {
-      onCommentSend();
+      onCommentSend(profId);
     }
   });
-  sendCommentButton.addEventListener("click", () => onCommentSend());
-}
 
-function onCommentSend() {
-  sendComment(
-    document.getElementById("commentContentInput").value,
-    profId
-  ).then(() => {
-    getComments(profId).then(function (comments) {
-      loadComments(comments);
-    });
-  });
-}
-
-function openCommentsPopup(popupId, profId) {
-  openPopup(popupId);
-
-  getComments(profId).then(function (comments) {
-    loadComments(comments);
-  });
-
-  recreateNode(document.getElementById("commentPopup"), true);
-
-  const sendCommentButton = document.getElementById("sendCommentButton");
-  sendCommentButton.addEventListener("click", () => {
-    sendComment(
-      document.getElementById("commentContentInput").value,
-      profId
-    ).then(() => {
-      getComments(profId).then(function (comments) {
-        loadComments(comments);
-      });
-      document.getElementById("commentContentInput").value = "";
-    });
-  });
+  sendCommentButton.addEventListener("click", () => onCommentSend(profId));
 }
 
 function closePopup(id) {
