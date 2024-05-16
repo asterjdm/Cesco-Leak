@@ -7,9 +7,9 @@ $db = new Database;
 $searchQuery = $db->escapeStrings($_GET["searchQuery"]);
 
 if(isset($searchQuery)){
-    $teachers = $db->select("SELECT * FROM cescoleaks_teachers WHERE name LIKE '%$searchQuery%'");
+    $teachers = $db->select("SELECT * FROM cescoleaks_teachers WHERE name LIKE '%$searchQuery%' ORDER BY name");
 }else {
-    $teachers = $db->select("SELECT * FROM cescoleaks_teachers");
+    $teachers = $db->select("SELECT * FROM cescoleaks_teachers ORDER BY name");
 }
 
 foreach ($teachers as &$teacher) {
