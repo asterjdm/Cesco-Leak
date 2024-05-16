@@ -36,6 +36,20 @@ function openRatingPopup(popupId, profId) {
   });
 }
 
+function openCommentsPopup(popupId, profId) {
+  openPopup(popupId);
+
+  recreateNode(document.getElementById("commentPopup"), true);
+
+  const sendCommentButton = document.getElementById("sendCommentButton");
+  sendCommentButton.addEventListener("click", () => {
+    sendComment(
+      document.getElementById("commentContentInput").value,
+      profId
+    ).then(() => {});
+  });
+}
+
 function closePopup(id) {
   const popup = document.getElementById(id);
   popup.classList.add("closing");

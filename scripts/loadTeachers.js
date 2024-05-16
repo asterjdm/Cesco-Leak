@@ -90,7 +90,7 @@ function addTeachers(teachers) {
         <!-- Open comments popup -->
         <div
           class="standard-button standard-card-button"
-          onclick="openPopup('commentPopup')"
+          onclick="openCommentsPopup('commentPopup', ${teacher.ID})"
         >
           Lire les avis
         </div>

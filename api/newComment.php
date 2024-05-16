@@ -19,6 +19,7 @@ $hashedIp = $db->escapeStrings(hash("sha256", $clientIp. HASH_SECRET));
 
 $db->query("INSERT INTO cescoleaks_comments (teacher_ID, IP, content) VALUES 
             ('$teacherId', '$hashedIp', '$content')");
+echo json_encode(array());
 
 exit();
 ?>
