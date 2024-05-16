@@ -32,6 +32,31 @@ function openRatingPopup(popupId, profId) {
       getTeachers("").then(function (teachers) {
         addTeachers(teachers);
       });
+<<<<<<< HEAD
+    });
+  });
+}
+
+function openCommentsPopup(popupId, profId) {
+  openPopup(popupId);
+
+  getComments(profId).then(function (comments) {
+    loadComments(comments);
+  });
+
+  recreateNode(document.getElementById("commentPopup"), true);
+
+  const sendCommentButton = document.getElementById("sendCommentButton");
+  sendCommentButton.addEventListener("click", () => {
+    sendComment(
+      document.getElementById("commentContentInput").value,
+      profId
+    ).then(() => {
+      getComments(profId).then(function (comments) {
+        loadComments(comments);
+      });
+=======
+>>>>>>> 5770eae1837efa0ddbe3ff007c12c08e2521d235
     });
   });
 }

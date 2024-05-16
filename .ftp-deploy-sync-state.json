@@ -1,0 +1,225 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1715875706391,
+    "data": [
+        {
+            "type": "file",
+            "name": "about.html",
+            "size": 3520,
+            "hash": "b1184919dab20d9e7f4d80d668c3649a07ec5061eb14c81e7978e642c0d2d5ef"
+        },
+        {
+            "type": "folder",
+            "name": "api"
+        },
+        {
+            "type": "folder",
+            "name": "fonts"
+        },
+        {
+            "type": "folder",
+            "name": "images"
+        },
+        {
+            "type": "file",
+            "name": "index.html",
+            "size": 6157,
+            "hash": "6b268e81ac3489eb0417aeaa3688c1e9952e8e500cdbe2d70c5d677b1ba80ccb"
+        },
+        {
+            "type": "folder",
+            "name": "scripts"
+        },
+        {
+            "type": "folder",
+            "name": "styles"
+        },
+        {
+            "type": "file",
+            "name": "api/database.php",
+            "size": 1112,
+            "hash": "5070c22f03f5caf37bf4043af6c41a5edda86e5ef4bb1bf165ca66d6b57c2f34"
+        },
+        {
+            "type": "file",
+            "name": "api/getTeachers.php",
+            "size": 1272,
+            "hash": "96b542617e1b83e15f84b7ccb9acc835ce5b70f7fd3a117ba38b599771c940e0"
+        },
+        {
+            "type": "file",
+            "name": "api/newRating.php",
+            "size": 1830,
+            "hash": "a143cbeb552295edb8c4ecf3010d747a3ec4a9600392dcf24e84e5718ce4edf9"
+        },
+        {
+            "type": "file",
+            "name": "api/newComment.php",
+            "size": 724,
+            "hash": "5416f207ffd1eff07be90baaf7c463fd9419bf7b6c2052a91597abfe68a78b43"
+        },
+        {
+            "type": "file",
+            "name": "api/newTeacher.php",
+            "size": 247,
+            "hash": "e2d86224d8598a821466f1ba1c3dfa0b302359429ebc3252d8e95412b5601082"
+        },
+        {
+            "type": "file",
+            "name": "api/sendMail.php",
+            "size": 426,
+            "hash": "e8d1611b601976f487a443fcdc799a9b39d2fa8b406bf1be816227d8d9700f35"
+        },
+        {
+            "type": "folder",
+            "name": "api/utils"
+        },
+        {
+            "type": "file",
+            "name": "fonts/Jersey20-Regular.ttf",
+            "size": 672020,
+            "hash": "5a735ca31f18bb5b6ed2bd5590fedcad207ce5181cb1661aa1f4aaed8ae6fbee"
+        },
+        {
+            "type": "file",
+            "name": "fonts/SpaceGrotesk.ttf",
+            "size": 134112,
+            "hash": "306e2f68554cf47df0aafaa034b678df63a6fdd190a1dcc6487aa6f34dfb981f"
+        },
+        {
+            "type": "file",
+            "name": "images/close.svg",
+            "size": 218,
+            "hash": "f9c17e30af22776151e59634d14a11c5622dfe755634d501f3435f898cccbd51"
+        },
+        {
+            "type": "file",
+            "name": "images/default.png",
+            "size": 245525,
+            "hash": "63855146e0f4096cd4197654b5b3ecabd62f09476fbec83c7c5afd77b31ec25d"
+        },
+        {
+            "type": "file",
+            "name": "images/favicon.ico",
+            "size": 198646,
+            "hash": "c2217b4816abc7c84edfc374734031d3a6793a20b1f73a7d4aba289d29a6da18"
+        },
+        {
+            "type": "file",
+            "name": "images/plus.png",
+            "size": 11739,
+            "hash": "34c6f82feb981e0e761ed402d2d7c6f91da47b291be1b1d6b98dc56c51f433dc"
+        },
+        {
+            "type": "file",
+            "name": "images/search.png",
+            "size": 2994,
+            "hash": "910191073d5f423865363a3e59d29afae427b1992195d66d9f9d60cffdaea05e"
+        },
+        {
+            "type": "file",
+            "name": "images/upload.png",
+            "size": 9933,
+            "hash": "5e64b3a5a69a987dfa2acfcdd9890663383af6cb6d1eda56f2dfa77ae2e26f33"
+        },
+        {
+            "type": "file",
+            "name": "scripts/getTeachers.js",
+            "size": 142,
+            "hash": "b92b4f11dcddf0271caea3f3a31ee816d1f88d57617d633c4323bd320d04be39"
+        },
+        {
+            "type": "file",
+            "name": "scripts/loadTeachers.js",
+            "size": 3034,
+            "hash": "cffb1b6b0006fe86497382f6083b3d4dfe749c2850f0476cf11c7e4e6511d29f"
+        },
+        {
+            "type": "file",
+            "name": "scripts/page.js",
+            "size": 1161,
+            "hash": "0289f7a94a01bf5a5b78a563d34f065f3d9fe844be1590afc8f0ac3584baf04c"
+        },
+        {
+            "type": "file",
+            "name": "scripts/popup.js",
+            "size": 2181,
+            "hash": "0122bb301e8b13d5b1a3f87a5e9afe8165a71a90aa32b064a8b144d732c85a8b"
+        },
+        {
+            "type": "file",
+            "name": "scripts/sendComment.js",
+            "size": 402,
+            "hash": "f7d462583bc723dbd141252fc0e27af9ce80d5266a5674f8e52a8218d3574724"
+        },
+        {
+            "type": "file",
+            "name": "scripts/sendRating.js",
+            "size": 502,
+            "hash": "695f904f2840944267e0ac8b93678be3cbe56a20e608b852e2ba7bb2b972f555"
+        },
+        {
+            "type": "folder",
+            "name": "scripts/utils"
+        },
+        {
+            "type": "file",
+            "name": "styles/about.css",
+            "size": 151,
+            "hash": "65ba983a406c47e7d088efdcdc488984d0cc09cae3fc6216b321ab8efeef61fd"
+        },
+        {
+            "type": "file",
+            "name": "styles/header.css",
+            "size": 1690,
+            "hash": "9bd1ec4e8c83dd4fc1c17ae6648eed87d29d8756fdb9bb7777ae2b7543636512"
+        },
+        {
+            "type": "folder",
+            "name": "styles/standard-assets"
+        },
+        {
+            "type": "file",
+            "name": "styles/styles.css",
+            "size": 1455,
+            "hash": "e2420c6b8529e28c4a815e62f2ab56f391f92a04201dd6f42d10ff771c2eb82e"
+        },
+        {
+            "type": "file",
+            "name": "api/utils/getClientIp.php",
+            "size": 711,
+            "hash": "ee568c12fff23b77bcb0db8309fa6e3f5fa2315d9c75f980f0032ab54b7016ff"
+        },
+        {
+            "type": "file",
+            "name": "scripts/utils/objectToFormData.js",
+            "size": 199,
+            "hash": "c5b8b48e77b6f12a92b870196b16b86ce4dee36f9ff9f9276587fbca8d5fefc7"
+        },
+        {
+            "type": "file",
+            "name": "styles/standard-assets/button.css",
+            "size": 501,
+            "hash": "aae6c38fc9e43bd23ccc6d6823864ad87cc31495369dcf3ed893a65dde49ed78"
+        },
+        {
+            "type": "file",
+            "name": "styles/standard-assets/card.css",
+            "size": 2997,
+            "hash": "6a7a6355d2d0e3d227a260595d584d60ac0f247c80f4ce727bae39bfc0b0ce85"
+        },
+        {
+            "type": "file",
+            "name": "styles/standard-assets/input.css",
+            "size": 360,
+            "hash": "2a3ba2ff25ccf842b44e3634a7446c5d099852071d7a6f437b6424d2706f817f"
+        },
+        {
+            "type": "file",
+            "name": "styles/standard-assets/popup.css",
+            "size": 6187,
+            "hash": "c52b31d8ace24b412ac09646311e2c0105e5eec9b56f9fcea4bcdb2a9bef4c43"
+        }
+    ]
+}
