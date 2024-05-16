@@ -1,8 +1,6 @@
 const imageInput = document.getElementById("uploadPhoto");
 const previewImage = document.getElementById("previewImage");
-const standardPopupContentMessages = document.getElementById(
-  "standardPopupContentMessages"
-);
+const standardPopupContentMessages = document.getElementById("commentsPlace");
 
 const ratingValues = document.querySelectorAll(".value");
 const ratingTexts = document.querySelectorAll(".score-value p");

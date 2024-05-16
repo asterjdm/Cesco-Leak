@@ -39,6 +39,10 @@ function openRatingPopup(popupId, profId) {
 function openCommentsPopup(popupId, profId) {
   openPopup(popupId);
 
+  getComments(profId).then(function (comments) {
+    loadComments(comments);
+  });
+
   recreateNode(document.getElementById("commentPopup"), true);
 
   const sendCommentButton = document.getElementById("sendCommentButton");
@@ -46,7 +50,12 @@ function openCommentsPopup(popupId, profId) {
     sendComment(
       document.getElementById("commentContentInput").value,
       profId
-    ).then(() => {});
+    ).then(() => {
+      getComments(profId).then(function (comments) {
+        loadComments(comments);
+      });
+      document.getElementById("commentContentInput").value = "";
+    });
   });
 }
 

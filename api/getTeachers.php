@@ -1,13 +1,11 @@
 <?php
-
-
 header('Content-type: application/json');
 
 include_once(dirname(__FILE__) . "/database.php");
-
-$searchQuery = $_GET["searchQuery"];
-
 $db = new Database;
+
+$searchQuery = $db->escapeStrings($_GET["searchQuery"]);
+
 if(isset($searchQuery)){
     $teachers = $db->select("SELECT * FROM cescoleaks_teachers WHERE name LIKE '%$searchQuery%'");
 }else {
