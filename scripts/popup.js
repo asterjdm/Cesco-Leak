@@ -29,6 +29,9 @@ function openRatingPopup(popupId, profId) {
       parseFloat(document.getElementById("ratingHumor").value)
     ).then(() => {
       closePopup(popupId);
+      getTeachers("").then(function (teachers) {
+        addTeachers(teachers);
+      });
     });
   });
 }
