@@ -21,12 +21,16 @@
     <script src="./scripts/loadTeachers.js" defer></script>
     <script src="./scripts/utils/objectToFormData.js"></script>
     <script src="./scripts/getTeachers.js"></script>
-    <script src="./scripts/rating.js"></script>
+    <script src="./scripts/sendRating.js"></script>
+    <script src="./scripts/getComments.js"></script>
+    <script src="./scripts/sendComment.js"></script>
+
     <script src="./scripts/popup.js" defer></script>
+    <script src="./scripts/loadComments.js" defer></script>
     <script src="./scripts/page.js" defer></script>
 
 
-    <title>CESCO LEAK</title>
+    <title>CESCOLEAKS</title>
 </head>
 
 <body>
@@ -46,7 +50,7 @@
             <img class="main-header-button-img" src="./images/plus.png" alt="plus icon">
         </button>
     </header>
-    <button class="standard-button" onclick="window.location.href='./about.hmtl'">À-propos</button>
+    <button class="standard-button" onclick="window.location.href='about.html'">À-propos</button>
 
     <main id="profCards">
         <!-- Professors cards -->
@@ -102,12 +106,12 @@
                 <img class="standard-popup-close-img" draggable="false" src="./images/close.svg" alt="close icon">
             </button>
             <div class="standard-popup-content comment-popup">
-                <div id="standardPopupContentMessages" class="standard-popup-content-messages">
+                <div id="commentsPlace" class="standard-popup-content-messages">
 
                 </div>
                 <div class="standard-popup-content-send-messages">
-                    <input type="text" class="standard-input send-message">
-                    <button class="standard-button send-message">Envoyer</button>
+                    <input id="commentContentInput" type="text" class="standard-input send-message">
+                    <button id="sendCommentButton" class="standard-button send-message">Envoyer</button>
                 </div>
             </div>
         </div>

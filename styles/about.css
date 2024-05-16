@@ -1,0 +1,14 @@
+body {
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+span {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+p,
+h1 {
+  margin-bottom: 35px;
+}

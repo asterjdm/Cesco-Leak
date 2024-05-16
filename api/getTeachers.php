@@ -1,6 +1,4 @@
 <?php
-
-
 header('Content-type: application/json');
 
 include_once(dirname(__FILE__) . "/database.php");
