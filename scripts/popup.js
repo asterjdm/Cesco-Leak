@@ -46,14 +46,24 @@ function openCommentsPopup(popupId, profId) {
   recreateNode(document.getElementById("commentPopup"), true);
 
   const sendCommentButton = document.getElementById("sendCommentButton");
-  sendCommentButton.addEventListener("click", () => {
-    sendComment(
-      document.getElementById("commentContentInput").value,
-      profId
-    ).then(() => {
-      getComments(profId).then(function (comments) {
-        loadComments(comments);
-      });
+  const sendCommentInput = document.getElementById("commentContentInput");
+  console.log(sendCommentInput.value);
+  sendCommentInput.addEventListener("input", function (e) {
+    alert(e.key);
+    if (e.key == "Enter") {
+      onCommentSend();
+    }
+  });
+  sendCommentButton.addEventListener("click", () => onCommentSend());
+}
+
+function onCommentSend() {
+  sendComment(
+    document.getElementById("commentContentInput").value,
+    profId
+  ).then(() => {
+    getComments(profId).then(function (comments) {
+      loadComments(comments);
     });
   });
 }

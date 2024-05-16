@@ -6,6 +6,5 @@ async function getComments(profId) {
     }),
   });
   let responseJson = await response.json();
-  console.log(responseJson);
   return responseJson;
 }

@@ -33,7 +33,6 @@ function addTeachers(teachers) {
 
   let htmlResult = "";
   teachers.forEach((teacher) => {
-    console.log(teacher);
     htmlResult += /*html*/ `
       <div class="standard-card">
         <div class="standard-card-top">
