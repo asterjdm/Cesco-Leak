@@ -63,8 +63,8 @@ function addTeachers(teachers) {
                   teacher.kindness +
                   teacher.authority +
                   teacher.humor) /
-                  4
-              )
+                  4,
+              ),
             )}
           </div>
 
