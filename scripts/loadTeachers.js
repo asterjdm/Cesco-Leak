@@ -81,7 +81,7 @@ function addTeachers(teachers) {
             ${getStarsHtml(teacher.teaching_quality)}
           </div>
 
-          <p class="standart-card-stars-text">Gentilesse</p>
+          <p class="standart-card-stars-text">Sympathie</p>
           <div class="standard-card-stars">
             ${getStarsHtml(teacher.kindness)}
           </div>
