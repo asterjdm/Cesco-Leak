@@ -21,13 +21,16 @@ foreach ($teachers as &$teacher) {
     $authorityTotal = 0;
     $humorTotal = 0;
 
+    $votesCount = 0;
     foreach ($votesData as $vote) {
+        $votesCount++;
         $teachingQualityTotal += $vote["teaching_quality"];
         $kindnessTotal += $vote["kindness"];
         $authorityTotal += $vote["authority"];
         $humorTotal += $vote["humor"];
     }
 
+    $teacher["votes_count"] = $votesCount;
     $teacher["teaching_quality"] = ($votesCount > 0) ? round($teachingQualityTotal / $votesCount) : 0;
     $teacher["kindness"] = ($votesCount > 0) ? round($kindnessTotal / $votesCount) : 0;
     $teacher["authority"] = ($votesCount > 0) ? round($authorityTotal / $votesCount) : 0;
