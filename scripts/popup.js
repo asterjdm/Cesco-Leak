@@ -26,7 +26,7 @@ function openRatingPopup(popupId, profId) {
       parseFloat(document.getElementById("ratingTeachingQuality").value),
       parseFloat(document.getElementById("ratingKindness").value),
       parseFloat(document.getElementById("ratingAuthority").value),
-      parseFloat(document.getElementById("ratingHumor").value)
+      parseFloat(document.getElementById("ratingHumor").value),
     ).then(() => {
       closePopup(popupId);
       getTeachers("").then(function (teachers) {
@@ -39,7 +39,7 @@ function openRatingPopup(popupId, profId) {
 function onCommentSend(profId) {
   sendComment(
     document.getElementById("commentContentInput").value,
-    profId
+    profId,
   ).then(() => {
     getComments(profId).then(function (comments) {
       loadComments(comments);
