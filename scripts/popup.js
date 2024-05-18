@@ -40,15 +40,21 @@ function openRatingPopup(popupId, profId) {
 }
 
 function onCommentSend(profId) {
-  sendComment(
-    document.getElementById("commentContentInput").value,
-    profId
-  ).then(() => {
-    getComments(profId).then(function (comments) {
-      loadComments(comments);
+  if (
+    document
+      .getElementById("commentContentInput")
+      .value.replace(" ", "")
+      .replace("‎", "") != ""
+  )
+    sendComment(
+      document.getElementById("commentContentInput").value,
+      profId
+    ).then(() => {
+      getComments(profId).then(function (comments) {
+        loadComments(comments);
+      });
+      document.getElementById("commentContentInput").value = "";
     });
-    document.getElementById("commentContentInput").value = "";
-  });
 }
 
 function openCommentsPopup(popupId, profId) {
