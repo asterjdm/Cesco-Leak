@@ -3,6 +3,7 @@
     margin-left: 17px;
     margin-right: 17px;
     border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: 0px;
     padding-left: 7.5px;
     padding-right: 7.5px;
     width: calc(100% - 37.5px);
