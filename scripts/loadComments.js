@@ -1,6 +1,7 @@
 function loadComments(comments) {
   const commentsEmp = document.getElementById("commentsPlace");
-  commentsEmp.innerHTML = "";
+  commentsEmp.innerHTML =
+    "<p>Il n'y a pas de commentaires pour le moment...</p>";
   let commentsHtml = "";
 
   for (let i = 0; i < comments.length; i++) {
@@ -14,5 +15,7 @@ function loadComments(comments) {
     `;
   }
 
-  commentsEmp.innerHTML = commentsHtml;
+  if (comments.length >= 1) {
+    commentsEmp.innerHTML = commentsHtml;
+  }
 }
