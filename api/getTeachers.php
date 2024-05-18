@@ -31,7 +31,7 @@ if (isset($searchQuery)) {
     $teachers = $db->select("SELECT * FROM cescoleaks_teachers ORDER BY name");
 }
 
-foreach ($teachers as &$teacher) {
+foreach ($teachers as $teacher) {
     $votesData = $db->select("SELECT * FROM cescoleaks_votes WHERE teacher_ID = '{$teacher["ID"]}'");
     $votesCount = count($votesData);
 
