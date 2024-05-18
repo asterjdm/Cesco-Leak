@@ -1,6 +1,6 @@
 .main-header {
   border-bottom: var(--border-width) var(--border-style) var(--border-color);
-  padding-left: 10px;
+  padding-left: 17px;
   display: flex;
   align-items: center;
   gap: 20px;

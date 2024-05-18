@@ -27,10 +27,10 @@
     color: var(--main-color);
 }
 
-*::selection {
+/* *::selection {
     background-color: var(--border-color);
     color: var(--main-background);
-}
+} */
 
 
 body {
