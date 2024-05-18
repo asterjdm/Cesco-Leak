@@ -1,8 +1,8 @@
 <?php
 header('Content-type: application/json');
-// ini_set('display_errors', '1');
-// ini_set('display_startup_errors', '1');
-// error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 
 
 include_once(dirname(__FILE__) . "/database.php");
@@ -31,7 +31,8 @@ if (isset($searchQuery)) {
     $teachers = $db->select("SELECT * FROM cescoleaks_teachers ORDER BY name");
 }
 
-foreach ($teachers as $teacher) {
+foreach ($teachers as &$teacher) {
+    $comments = $db->select("SELECT * FROM cescoleaks_comments WHERE teacher_ID = '{$teacher["ID"]}'");
     $votesData = $db->select("SELECT * FROM cescoleaks_votes WHERE teacher_ID = '{$teacher["ID"]}'");
     $votesCount = count($votesData);
 
@@ -49,6 +50,7 @@ foreach ($teachers as $teacher) {
         $humorTotal += $vote["humor"];
     }
 
+    $teacher["comments_count"] = count($comments);
     $teacher["votes_count"] = $votesCount;
     $teacher["teaching_quality"] = ($votesCount > 0) ? $teachingQualityTotal / $votesCount : 0;
     $teacher["kindness"] = ($votesCount > 0) ? $kindnessTotal / $votesCount : 0;

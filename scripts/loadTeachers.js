@@ -93,7 +93,7 @@ function addTeachers(teachers) {
           class="standard-button standard-card-button"
           onclick="openCommentsPopup('commentPopup', ${teacher.ID})"
         >
-          Lire les avis
+          Lire les avis (${teacher.comments_count})
         </div>
       </div>
     `;
