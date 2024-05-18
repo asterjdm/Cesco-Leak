@@ -1,232 +1,154 @@
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/header.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
 
-    <!-- Standard assets -->
-    <link rel="stylesheet" href="./styles/standard-assets/button.css" />
-    <link rel="stylesheet" href="./styles/standard-assets/select.css" />
-    <link rel="stylesheet" href="./styles/standard-assets/input.css" />
-    <link rel="stylesheet" href="./styles/standard-assets/popup.css" />
-    <link rel="stylesheet" href="./styles/standard-assets/card.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/header.css" />
 
-    <!-- Scripts -->
-    <script src="./scripts/loadTeachers.js" defer></script>
-    <script src="./scripts/utils/objectToFormData.js"></script>
-    <script src="./scripts/getTeachers.js"></script>
-    <script src="./scripts/sendRating.js"></script>
-    <script src="./scripts/getComments.js"></script>
-    <script src="./scripts/sendComment.js"></script>
+  <!-- Standard assets -->
+  <link rel="stylesheet" href="./styles/standard-assets/button.css" />
+  <link rel="stylesheet" href="./styles/standard-assets/select.css" />
+  <link rel="stylesheet" href="./styles/standard-assets/input.css" />
+  <link rel="stylesheet" href="./styles/standard-assets/popup.css" />
+  <link rel="stylesheet" href="./styles/standard-assets/card.css" />
 
-    <script src="./scripts/sendComment.js"></script>
-    <script src="./scripts/popup.js" defer></script>
-    <script src="./scripts/loadComments.js" defer></script>
-    <script src="./scripts/page.js" defer></script>
+  <!-- Scripts -->
+  <script src="./scripts/loadTeachers.js" defer></script>
+  <script src="./scripts/utils/objectToFormData.js"></script>
+  <script src="./scripts/getTeachers.js"></script>
+  <script src="./scripts/sendRating.js"></script>
+  <script src="./scripts/getComments.js"></script>
+  <script src="./scripts/sendComment.js"></script>
 
-    <title>CESCOLEAKS</title>
-  </head>
+  <script src="./scripts/sendComment.js"></script>
+  <script src="./scripts/popup.js" defer></script>
+  <script src="./scripts/loadComments.js" defer></script>
+  <script src="./scripts/page.js" defer></script>
 
-  <body>
-    <!-- Main header -->
-    <header class="main-header">
-      <div class="main-header-title">
-        <h1 class="main-header-title-text1">Cesco.Leaks</h1>
-        <h1 class="main-header-title-text2">cl</h1>
-      </div>
-      <div class="main-header-search">
-        <input
-          id="searchBar"
-          class="main-header-search-input"
-          type="text"
-          placeholder="Chercher un prof"
-        />
-        <img
-          class="main-header-search-img"
-          src="./images/search.png"
-          alt="search icon"
-        />
-      </div>
+  <title>CESCOLEAKS</title>
+</head>
 
-      <button
-        class="standard-button main-header-button"
-        onclick="openPopup('addPopup')"
-      >
-        <p class="main-header-button-text">Nouveau prof</p>
-        <img
-          class="main-header-button-img"
-          src="./images/plus.png"
-          alt="plus icon"
-        />
+<body>
+  <!-- Main header -->
+  <header class="main-header">
+    <div class="main-header-title">
+      <h1 class="main-header-title-text1">Cesco.Leaks</h1>
+      <h1 class="main-header-title-text2">cl</h1>
+    </div>
+    <div class="main-header-search">
+      <input id="searchBar" class="main-header-search-input" type="text" placeholder="Chercher un prof" />
+      <img class="main-header-search-img" src="./images/search.png" alt="search icon" />
+    </div>
+
+    <button class="standard-button main-header-button" onclick="openPopup('addPopup')">
+      <p class="main-header-button-text">Nouveau prof</p>
+      <img class="main-header-button-img" src="./images/plus.png" alt="plus icon" />
+    </button>
+  </header>
+
+  <select name="sort-teachers" id="sortTeachers" class="standard-select">
+    <option value="alphabet">A..Z</option>
+    <option value="best_score">Le meilleur score</option>
+    <option value="worst_score">Le pire score</option>
+    <option value="most_votes">Le plus de votes</option>
+    <option value="least_votes">Le moins de votes</option>
+  </select>
+
+  <main id="profCards">
+    <!-- Professors cards -->
+  </main>
+
+  <footer class="main-footer">
+    <button class="standard-button" onclick="window.location.href='about.html'">À-propos</button>
+    <button class="standard-button" onclick="window.location.href='rules.html'">Règles</button>
+    <p>An Anonymous production</p>
+  </footer>
+
+  <!----------------------------- Popups ----------------------------->
+  <div id="addPopup" class="standard-popup">
+    <div class="whole-section">
+      <button class="standard-button standard-popup-close" onclick="closePopup('addPopup')">
+        <img class="standard-popup-close-img" draggable="false" src="./images/close.svg" alt="close icon" />
       </button>
-    </header>
-
-    <select name="sort-teachers" id="sortTeachers" class="standard-select">
-        <option value="alphabet">A..Z</option>
-        <option value="best_score">Le meilleur score</option>
-        <option value="worst_score">Le pire score</option>
-        <option value="most_votes">Le plus de votes</option>
-        <option value="least_votes">Le moins de votes</option>
-    </select>
-
-    <main id="profCards">
-      <!-- Professors cards -->
-    </main>
-
-    <footer class="main-footer">
-      <button class="standard-button" onclick="window.location.href='about.html'">À-propos</button>
-      <button class="standard-button" onclick="window.location.href='rules.html'">Règles</button>
-      <p>An Anonymous production</p>
-    </footer>
-
-    <!----------------------------- Popups ----------------------------->
-    <div id="addPopup" class="standard-popup">
-      <div class="whole-section">
-        <button
-          class="standard-button standard-popup-close"
-          onclick="closePopup('addPopup')"
-        >
-          <img
-            class="standard-popup-close-img"
-            draggable="false"
-            src="./images/close.svg"
-            alt="close icon"
-          />
-        </button>
-        <div class="standard-popup-content add-popup">
-          <form
-            style="display: contents"
-            method="post"
-            action="api/newTeacher.php"
-          >
-            <input
-              name="name"
-              class="standard-input insert-name"
-              type="text"
-              placeholder="Nom du prof."
-            />
-            <button type="submit" class="standard-button send-request">
-              Envoyer
-            </button>
-          </form>
-          <!-- <div class="select-image">
+      <div class="standard-popup-content add-popup">
+        <form style="display: contents" method="post" action="api/newTeacher.php">
+          <input name="name" class="standard-input insert-name" type="text" placeholder="Nom du prof." />
+          <button type="submit" class="standard-button send-request">
+            Envoyer
+          </button>
+        </form>
+        <!-- <div class="select-image">
                     <input id="uploadPhoto" class="upload-photo" type="file">
                     <img id="previewImage" class="preview-image" src="./images/upload.png">
                 </div> -->
-        </div>
       </div>
     </div>
+  </div>
 
-    <div id="commentPopup" class="standard-popup">
-      <div class="whole-section comment-popup">
-        <button
-          class="standard-button standard-popup-close comment-popup"
-          onclick="closePopup('commentPopup')"
-        >
-          <img
-            class="standard-popup-close-img"
-            draggable="false"
-            src="./images/close.svg"
-            alt="close icon"
-          />
-        </button>
-        <div class="standard-popup-content comment-popup">
-          <div id="commentsPlace" class="standard-popup-content-messages"></div>
-          <div class="standard-popup-content-send-messages">
-            <input
-              id="commentContentInput"
-              type="text"
-              class="standard-input send-message"
-            />
-            <button id="sendCommentButton" class="standard-button send-message">
-              Envoyer
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="ratingPopup" class="standard-popup">
-      <div class="whole-section rating-popup">
-        <button
-          class="standard-button standard-popup-close comment-popup other"
-          onclick="closePopup('ratingPopup')"
-        >
-          <img
-            class="standard-popup-close-img comment-popup other"
-            draggable="false"
-            src="./images/close.svg"
-            alt="close icon"
-          />
-        </button>
-        <div class="standard-popup-content rating-popup">
-          <div class="score">
-            <p class="score-title">Autorité</p>
-            <div class="score-value">
-              <input
-                id="ratingAuthority"
-                class="value"
-                type="range"
-                min="1"
-                max="10"
-                value="5"
-              />
-              <p id="ratingText1">5</p>
-            </div>
-          </div>
-          <div class="score">
-            <p class="score-title">Humour</p>
-            <div class="score-value">
-              <input
-                id="ratingHumor"
-                class="value"
-                type="range"
-                min="1"
-                max="10"
-                value="5"
-              />
-              <p id="ratingText2">5</p>
-            </div>
-          </div>
-          <div class="score">
-            <p class="score-title">Qualité d'enseignement</p>
-            <div class="score-value">
-              <input
-                id="ratingTeachingQuality"
-                class="value"
-                type="range"
-                min="1"
-                max="10"
-                value="5"
-              />
-              <p id="ratingText3">5</p>
-            </div>
-          </div>
-          <div class="score">
-            <p class="score-title">Sympathie</p>
-            <div class="score-value">
-              <input
-                id="ratingKindness"
-                class="value"
-                type="range"
-                min="1"
-                max="10"
-                value="5"
-              />
-              <p id="ratingText4">5</p>
-            </div>
-          </div>
-          <button id="voteRatingButton" class="standard-button save-ratings">
-            Voter
+  <div id="commentPopup" class="standard-popup">
+    <div class="whole-section comment-popup">
+      <button class="standard-button standard-popup-close comment-popup" onclick="closePopup('commentPopup')">
+        <img class="standard-popup-close-img" draggable="false" src="./images/close.svg" alt="close icon" />
+      </button>
+      <div class="standard-popup-content comment-popup">
+        <div id="commentsPlace" class="standard-popup-content-messages"></div>
+        <div class="standard-popup-content-send-messages">
+          <input id="commentContentInput" type="text" class="standard-input send-message" />
+          <button id="sendCommentButton" class="standard-button send-message">
+            Envoyer
           </button>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+
+  <div id="ratingPopup" class="standard-popup">
+    <div class="whole-section rating-popup">
+      <button class="standard-button standard-popup-close comment-popup other" onclick="closePopup('ratingPopup')">
+        <img class="standard-popup-close-img comment-popup other" draggable="false" src="./images/close.svg"
+          alt="close icon" />
+      </button>
+      <div class="standard-popup-content rating-popup">
+        <div class="score">
+          <p class="score-title">Autorité</p>
+          <div class="score-value">
+            <input id="ratingAuthority" class="value" type="range" min="1" max="10" value="5" />
+            <p id="ratingText1">5</p>
+          </div>
+        </div>
+        <div class="score">
+          <p class="score-title">Humour</p>
+          <div class="score-value">
+            <input id="ratingHumor" class="value" type="range" min="1" max="10" value="5" />
+            <p id="ratingText2">5</p>
+          </div>
+        </div>
+        <div class="score">
+          <p class="score-title">Qualité d'enseignement</p>
+          <div class="score-value">
+            <input id="ratingTeachingQuality" class="value" type="range" min="1" max="10" value="5" />
+            <p id="ratingText3">5</p>
+          </div>
+        </div>
+        <div class="score">
+          <p class="score-title">Sympathie</p>
+          <div class="score-value">
+            <input id="ratingKindness" class="value" type="range" min="1" max="10" value="5" />
+            <p id="ratingText4">5</p>
+          </div>
+        </div>
+        <button id="voteRatingButton" class="standard-button save-ratings">
+          Voter
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

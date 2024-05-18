@@ -1,15 +1,33 @@
 <?php
 header('Content-type: application/json');
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
+
 
 include_once(dirname(__FILE__) . "/database.php");
 $db = new Database;
 
 $searchQuery = $db->escapeStrings($_GET["searchQuery"]);
+$sort = $db->escapeStrings($_GET["sort"]);
+
+function compareTeachers($a, $b, $sort)
+{
+    if ($sort == "best_score") {
+        return $b["teaching_quality"] + $b["kindness"] + $b["authority"] + $b["humor"] - $a["teaching_quality"] - $a["kindness"] - $a["authority"] - $a["humor"];
+    } elseif ($sort == "most_votes") {
+        return $b["votes_count"] - $a["votes_count"];
+    } elseif ($sort  == "least_votes") {
+        return $a["votes_count"] - $b["votes_count"];
+    } elseif ($sort == "worst_score") {
+        return $a["teaching_quality"] + $a["kindness"] + $a["authority"] + $a["humor"] - $b["teaching_quality"] - $b["kindness"] - $b["authority"] - $b["humor"];
+    }
+}
 
 
-if(isset($searchQuery)){
+if (isset($searchQuery)) {
     $teachers = $db->select("SELECT * FROM cescoleaks_teachers WHERE name LIKE '%$searchQuery%' ORDER BY name");
-}else {
+} else {
     $teachers = $db->select("SELECT * FROM cescoleaks_teachers ORDER BY name");
 }
 
@@ -38,21 +56,8 @@ foreach ($teachers as &$teacher) {
     $teacher["humor"] = ($votesCount > 0) ? $humorTotal / $votesCount : 0;
 }
 
-usort($teachers, function ($a, $b) {
-    $db = new Database;
-    $sort = $db->escapeStrings($_GET["sort"]);
-
-    if($sort == "best_score"){
-        return $b["teaching_quality"] + $b["kindness"] + $b["authority"] + $b["humor"] - $a["teaching_quality"] - $a["kindness"] - $a["authority"] - $a["humor"];
-    }elseif($sort == "most_votes"){ 
-        return $b["votes_count"] - $a["votes_count"];
-    }elseif($sort  == "less_votes"){
-        return $b["votes_count"] - $a["votes_count"]; 
-    }elseif($sort == "worst_score"){
-        return $a["teaching_quality"] - $a["kindness"] - $a["authority"] - $a["humor"] - $b["teaching_quality"] + $b["kindness"] + $b["authority"] + $b["humor"];
-    }
+usort($teachers, function ($a, $b) use ($sort) {
+    return compareTeachers($a, $b, $sort);
 });
 
 echo json_encode($teachers);
-
-?>

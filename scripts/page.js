@@ -30,7 +30,17 @@ window.onload = function () {
 };
 
 document.getElementById("searchBar").addEventListener("input", (e) => {
-  getTeachers(e.target.value).then(function (teachers) {
-    addTeachers(teachers);
-  });
+  getTeachers(e.target.value, document.getElementById("sortTeachers")).then(
+    function (teachers) {
+      addTeachers(teachers);
+    }
+  );
+});
+
+document.getElementById("sortTeachers").addEventListener("change", (e) => {
+  getTeachers(document.getElementById("searchBar").value, e.target.value).then(
+    function (teachers) {
+      addTeachers(teachers);
+    }
+  );
 });

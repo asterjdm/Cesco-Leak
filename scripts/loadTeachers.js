@@ -63,8 +63,8 @@ function addTeachers(teachers) {
                   teacher.kindness +
                   teacher.authority +
                   teacher.humor) /
-                  4,
-              ),
+                  4
+              )
             )}
           </div>
 
@@ -100,6 +100,9 @@ function addTeachers(teachers) {
   profCardsEmp.innerHTML = htmlResult;
 }
 
-getTeachers("").then(function (teachers) {
+getTeachers(
+  document.getElementById("searchBar").value,
+  document.getElementById("sortTeachers").value
+).then(function (teachers) {
   addTeachers(teachers);
 });
