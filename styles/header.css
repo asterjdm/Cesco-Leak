@@ -21,7 +21,7 @@
 
 .main-header-search {
   border: var(--border-width) var(--border-style) var(--border-color);
-  width: calc(100% - 563px);
+  width: calc(100% - 543px);
   display: flex;
   box-shadow: var(--border-width) var(--border-width) var(--border-color);
 }
