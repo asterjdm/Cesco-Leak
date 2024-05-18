@@ -80,7 +80,7 @@ function closePopup(id) {
   setTimeout(() => {
     popup.classList.remove("show", "closing");
   }, 250);
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'auto';
   localStorage.removeItem("openPopupId");
 }
 
@@ -99,13 +99,3 @@ document.addEventListener("keydown", function (event) {
     });
   }
 });
-
-function closePopup(id) {
-  const popup = document.getElementById(id);
-  popup.classList.add("closing");
-  setTimeout(() => {
-    popup.classList.remove("show", "closing");
-  }, 250);
-  document.body.style.overflow = 'hidden';
-  localStorage.removeItem("openPopupId");
-}
