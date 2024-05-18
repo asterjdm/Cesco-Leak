@@ -6,6 +6,7 @@ $db = new Database;
 
 $searchQuery = $db->escapeStrings($_GET["searchQuery"]);
 
+
 if(isset($searchQuery)){
     $teachers = $db->select("SELECT * FROM cescoleaks_teachers WHERE name LIKE '%$searchQuery%' ORDER BY name");
 }else {
@@ -31,11 +32,26 @@ foreach ($teachers as &$teacher) {
     }
 
     $teacher["votes_count"] = $votesCount;
-    $teacher["teaching_quality"] = ($votesCount > 0) ? round($teachingQualityTotal / $votesCount) : 0;
-    $teacher["kindness"] = ($votesCount > 0) ? round($kindnessTotal / $votesCount) : 0;
-    $teacher["authority"] = ($votesCount > 0) ? round($authorityTotal / $votesCount) : 0;
-    $teacher["humor"] = ($votesCount > 0) ? round($humorTotal / $votesCount) : 0;
+    $teacher["teaching_quality"] = ($votesCount > 0) ? $teachingQualityTotal / $votesCount : 0;
+    $teacher["kindness"] = ($votesCount > 0) ? $kindnessTotal / $votesCount : 0;
+    $teacher["authority"] = ($votesCount > 0) ? $authorityTotal / $votesCount : 0;
+    $teacher["humor"] = ($votesCount > 0) ? $humorTotal / $votesCount : 0;
 }
+
+usort($teachers, function ($a, $b) {
+    $db = new Database;
+    $sort = $db->escapeStrings($_GET["sort"]);
+
+    if($sort == "best_score"){
+        return $b["teaching_quality"] + $b["kindness"] + $b["authority"] + $b["humor"] - $a["teaching_quality"] - $a["kindness"] - $a["authority"] - $a["humor"];
+    }elseif($sort == "most_votes"){ 
+        return $b["votes_count"] - $a["votes_count"];
+    }elseif($sort  == "less_votes"){
+        return $b["votes_count"] - $a["votes_count"]; 
+    }elseif($sort == "worst_score"){
+        return $a["teaching_quality"] - $a["kindness"] - $a["authority"] - $a["humor"] - $b["teaching_quality"] + $b["kindness"] + $b["authority"] + $b["humor"];
+    }
+});
 
 echo json_encode($teachers);
 
