@@ -47,9 +47,17 @@ main {
 
 .main-footer {
     padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     height: 50px;
     border-top: var(--border-width) var(--border-style) var(--border-color);
 }
+
+.main-footer p {
+    font-size: 20px;
+}
+
 
 @media screen and (min-width: 1066px) {
     main {

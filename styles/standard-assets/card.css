@@ -27,7 +27,7 @@
 }
 
 .standard-card-name {
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   color: var(--main-color);
   user-select: all;
