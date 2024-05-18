@@ -1,7 +1,9 @@
 function openPopup(id) {
+  document.body.style.overflow = 'hidden';
   const popup = document.getElementById(id);
   popup.classList.add("show");
-  // localStorage.setItem("openPopupId", id);
+  localStorage.setItem("openPopupId", id)
+
 }
 
 function recreateNode(el, withChildren) {
@@ -78,15 +80,16 @@ function closePopup(id) {
   setTimeout(() => {
     popup.classList.remove("show", "closing");
   }, 250);
-  // localStorage.removeItem("openPopupId");
+  document.body.style.overflow = 'hidden';
+  localStorage.removeItem("openPopupId");
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const openPopupId = localStorage.getItem("openPopupId");
-//   if (openPopupId) {
-//     openPopup(openPopupId);
-//   }
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  const openPopupId = localStorage.getItem("openPopupId");
+  if (openPopupId) {
+    openPopup(openPopupId);
+  }
+});
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
@@ -96,3 +99,13 @@ document.addEventListener("keydown", function (event) {
     });
   }
 });
+
+function closePopup(id) {
+  const popup = document.getElementById(id);
+  popup.classList.add("closing");
+  setTimeout(() => {
+    popup.classList.remove("show", "closing");
+  }, 250);
+  document.body.style.overflow = 'hidden';
+  localStorage.removeItem("openPopupId");
+}
