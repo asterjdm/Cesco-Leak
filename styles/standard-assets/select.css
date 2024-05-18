@@ -1,7 +1,11 @@
 .standard-select {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: var(--border-width) var(--border-style) var(--border-color);
     padding-left: 7.5px;
     padding-right: 7.5px;
+    width: calc(100% - 20px);
     box-shadow: var(--border-width) var(--border-width) var(--border-color);
     font-size: 20px;
     text-align: center;
