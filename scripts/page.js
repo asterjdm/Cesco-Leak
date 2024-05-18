@@ -24,6 +24,12 @@ ratingValues.forEach((value, index) => {
 //     }
 // });
 
+getBann().then(function (result) {
+  if (result.banned) {
+    window.location.href = "banned.html";
+  }
+});
+
 window.onload = function () {
   standardPopupContentMessages.scrollTop =
     standardPopupContentMessages.scrollHeight;
