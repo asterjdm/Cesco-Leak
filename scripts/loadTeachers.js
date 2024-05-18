@@ -56,7 +56,7 @@ function addTeachers(teachers) {
         <div class="standard-card-stars-container">
           <p class="standart-card-stars-text">Moyenne <span style='text-transform: lowercase'>(${
             teacher.votes_count
-          } votes)</span></p>
+          } ${teacher.votes_count >= 2 ? "votes" : "vote"})</span></p>
 
           <div class="standard-card-stars">
             ${getStarsHtml(
