@@ -1,6 +1,6 @@
 .main-header {
   border-bottom: var(--border-width) var(--border-style) var(--border-color);
-  padding-left: 10px;
+  padding-left: 17px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 800px) {
   .main-header-search {
-    width: calc(100% - 417px);
+    width: calc(100% - 422px);
   }
 
   .main-header-button {

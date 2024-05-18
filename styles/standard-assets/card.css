@@ -27,15 +27,19 @@
 }
 
 .standard-card-name {
-  font-size: 18px;
+  font-size: 17px;
   text-transform: uppercase;
   color: var(--main-color);
   user-select: all;
 }
 
 .standard-card-top-right-button {
-  height: 55px;
+  height: 60.5px;
   width: 100%;
+}
+
+.standard-card-stars-container {
+  margin-top: 10px;
 }
 
 .standard-card-stars {
@@ -63,7 +67,7 @@
 .standart-card-stars-text {
   margin-bottom: -15px;
   transform: translateX(-1px);
-  font-size: 18px;
+  font-size: 17px;
   text-transform: uppercase;
   user-select: all;
 }
@@ -77,6 +81,9 @@
 @media screen and (max-width: 521px) {
   .standard-card {
     transform: scale(1.4) translateY(70px);
+  }
+  .bottom {
+    display: none;
   }
 }
 
