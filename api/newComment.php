@@ -21,6 +21,7 @@ $bannRecords = $db->select("SELECT * FROM cescoleaks_bann WHERE IP = '$hashedIp'
 
 if (count($bannRecords) > 0) {
     echo json_encode(array("error" => "banned"));
+    exit();
 }
 
 $db->query("INSERT INTO cescoleaks_comments (teacher_ID, IP, content) VALUES 
