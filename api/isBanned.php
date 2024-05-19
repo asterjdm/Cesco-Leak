@@ -18,7 +18,7 @@ if (count($bannRecords) >= 1) {
     // echo time();
     // echo $bannRecords[0]["end_time"];
     if ($bannRecords[0]["end_time"] <= time()) {
-        // $db->query("DELETE FROM cescoleaks_bann WHERE IP = '$hashedIp'");
+        $db->query("DELETE FROM cescoleaks_bann WHERE IP = '$hashedIp'");
         echo json_encode(array(
             "banned" => false,
             "ip" => $hashedIp,
