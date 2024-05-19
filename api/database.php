@@ -1,9 +1,12 @@
 <?php
 
-class Database {
+class Database
+{
 
     private $conn;
-    public function __construct() {
+    public function __construct()
+    {
+        // to test the database connection
         include_once(dirname(__FILE__) . "/secrets.php");
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
@@ -11,8 +14,9 @@ class Database {
             die("Connection failed: " . $this->conn->connect_error);
         }
     }
-    
-    public function select($sql_prompt) {
+
+    public function select($sql_prompt)
+    {
         $result = mysqli_query($this->conn, $sql_prompt);
 
         if (!$result) {
@@ -27,7 +31,8 @@ class Database {
         return $data;
     }
 
-    public function query($sql_prompt) {
+    public function query($sql_prompt)
+    {
         $result = $this->conn->query($sql_prompt);
 
         if (!$result) {
@@ -37,13 +42,13 @@ class Database {
         return $result;
     }
 
-    public function closeConnection() {
+    public function closeConnection()
+    {
         mysqli_close($this->conn);
     }
 
-    public function escapeStrings($str) {
+    public function escapeStrings($str)
+    {
         return mysqli_real_escape_string($this->conn, $str);
     }
 }
-
-?>
