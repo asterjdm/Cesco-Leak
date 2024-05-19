@@ -24,6 +24,11 @@ ratingValues.forEach((value, index) => {
 //     }
 // });
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("welcomePopup") != "true") {
+    openPopup("welcomePopup");
+  }
+});
 getBann().then(function (result) {
   if (result.banned) {
     window.location.href = "banned.html";

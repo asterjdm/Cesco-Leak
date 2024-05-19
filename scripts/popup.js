@@ -39,6 +39,11 @@ function openRatingPopup(popupId, profId) {
   });
 }
 
+function closeWelcomePopup(id) {
+  localStorage.setItem("welcomePopup", "true");
+  closePopup(id);
+}
+
 function onCommentSend(profId) {
   if (
     document
