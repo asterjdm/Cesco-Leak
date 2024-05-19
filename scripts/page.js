@@ -26,6 +26,7 @@ ratingValues.forEach((value, index) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("welcomePopup") != "true") {
+    document.body.style.overflow = "hidden";
     openPopup("welcomePopup");
   }
 });
