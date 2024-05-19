@@ -75,6 +75,13 @@ main {
 }
 
 @media screen and (max-width: 521px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
     main {
         padding-bottom: 205px;
         grid-template-columns: repeat(1, 1fr);

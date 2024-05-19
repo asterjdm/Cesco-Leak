@@ -2,6 +2,7 @@
     margin-top: 10px;
     margin-left: 17px;
     margin-right: 17px;
+    margin-bottom: -7px;
     border: var(--border-width) var(--border-style) var(--border-color);
     border-radius: none;
     padding-left: 7.5px;
@@ -17,3 +18,16 @@
     cursor: pointer;
   }
   
+@media screen and (max-width: 521px) {
+  .standard-select {
+    margin-bottom: -25px;
+    width: 352px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .standard-select {
+    margin-bottom: -20px;
+    width: 325px;
+  }
+}
