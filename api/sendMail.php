@@ -7,10 +7,12 @@ $userMsg = $_GET['msg'];
 $clientIP = getClientIp();
 $msg = "Le message du débile en question : $userMsg\n Son IP (on sais jamais) $clientIP";
 
-for ($i=0; $i < count(EMAILS); $i++) { 
+for ($i = 0; $i < count(EMAILS); $i++) {
     mail(EMAILS[$i], "CESCOLEAKS: Ya un débile qui nous envoi un message", $msg);
 }
 
+if (isset($_GET["return"])) {
+    header("location: ../{$_GET['return']}");
+    exit();
+}
 header("location: ../about.html");
-
-?>

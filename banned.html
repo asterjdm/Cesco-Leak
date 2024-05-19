@@ -20,6 +20,7 @@
 
     <h3>Si vous voulez nous contacter pour nous insulter :</h3>
     <form action="api/sendMail.php" method="get">
+        <input type="hidden" name="return" value="banned.html">
         <textarea name="msg" id="" placeholder=""></textarea>
         <button type="submit">Send</button>
     </form>
