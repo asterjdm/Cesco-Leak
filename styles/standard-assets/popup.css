@@ -83,6 +83,13 @@
   font-size: 16px;
 }
 
+.standard-popup-content.about {
+  padding: 20px;
+  width: 800px;
+  height: 600px;
+  overflow-y: auto;
+}
+
 .standard-popup-content.about span {
   text-decoration: line-through;
   font-style: italic;
