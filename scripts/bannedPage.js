@@ -1,5 +1,5 @@
 getBann().then((result) => {
-  if (result.banned == false) {
+  if (result.banned != true) {
     window.location.href = "index.html";
   }
   setInterval(() => {
