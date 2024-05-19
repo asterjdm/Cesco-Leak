@@ -6,7 +6,6 @@ class Database
     private $conn;
     public function __construct()
     {
-        // to test the database connection
         include_once(dirname(__FILE__) . "/secrets.php");
         $this->conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
