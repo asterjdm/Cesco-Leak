@@ -10,4 +10,7 @@ async function sendComment(content, teacher_ID) {
   //   if (responseJson.info == "vote updated") {
   //     alert("Votre vote a été mis a jour");
   //   }
+  if (responseJson.error == "banned") {
+    window.location.reload();
+  }
 }
