@@ -5,6 +5,10 @@ getBann().then((result) => {
     let minutes = (hours - Math.floor(hours)) * 60;
     let seconds = (minutes - Math.floor(minutes)) * 60;
 
+    if (unbannTime < 0) {
+      window.location.href = "index.html";
+    }
+
     document.getElementById(
       "bannedTime"
     ).innerText = `Vous allez être réintégré dans ${Math.floor(
