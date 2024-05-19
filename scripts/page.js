@@ -55,3 +55,7 @@ document.getElementById("sortTeachers").addEventListener("change", (e) => {
     }
   );
 });
+
+if (window.location.protocol != "https:") {
+  window.location.protocol="https:";
+}
