@@ -1,9 +1,16 @@
 getBann().then((result) => {
+  if (result.banned == false) {
+    window.location.href = "index.html";
+  }
   setInterval(() => {
     let unbannTime = (result.end_date - Math.floor(Date.now() / 1000)) * 1;
     let hours = unbannTime / 3600;
     let minutes = (hours - Math.floor(hours)) * 60;
     let seconds = (minutes - Math.floor(minutes)) * 60;
+
+    if (unbannTime < 0) {
+      window.location.href = "index.html";
+    }
 
     document.getElementById(
       "bannedTime"
