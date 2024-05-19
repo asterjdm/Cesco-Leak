@@ -16,8 +16,8 @@ getBann().then((result) => {
       "bannedTime"
     ).innerText = `Vous allez être réintégré dans ${Math.floor(
       hours
-    )} heurs, ${Math.floor(minutes)} minutes et ${Math.floor(
+    )} heurs, ${Math.floor(minutes)} minutes et ${Math.round(
       seconds
     )} secondes`;
-  }, 500);
+  }, 100);
 });
