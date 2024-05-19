@@ -87,12 +87,6 @@ function closePopup(id) {
   document.body.style.overflow = "auto";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (openPopupId) {
-    openPopup(openPopupId);
-  }
-});
-
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     const popups = document.querySelectorAll(".show");
