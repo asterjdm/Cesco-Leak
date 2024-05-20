@@ -43,10 +43,6 @@
   background: var(--main-background);
 }
 
-.standard-popup-whole-section-content.alert-popup-popup-popup {
-  width: 300px;
-  height: 100px;
-}
 
 .standard-popup-whole-section-content.add-popup {
   width: 250px;
@@ -76,13 +72,6 @@
   width: 35px;
   height: 35px;
 }
-
-.standard-button.alert-popup {
-  transform: translateY(10px);
-  width: 280px;
-  font-size: 16px;
-}
-
 
 .select-image {
   border: var(--border-width) var(--border-style) var(--border-color);
@@ -209,6 +198,22 @@
 .save-ratings {
   width: 617px;
   font-size: 25px;
+}
+
+/* Alert Popup */
+.standard-popup-whole-section-content.alert-popup {
+  padding: 10px;
+  width: 350px;
+  height: auto;
+}
+
+.alert-text {
+  font-size: 25px;
+  height: 100%;
+}
+
+.alert-button {
+  width: 100%;
 }
 
 /* Welcome popup */
