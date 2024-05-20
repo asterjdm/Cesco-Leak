@@ -12,7 +12,7 @@
   font-size: 65px;
   text-transform: uppercase;
   color: var(--main-color);
-  font-family: "Jersey20-Regular";
+  font-family: var(--title-font);
 }
 
 .main-header-title-text2 {
@@ -49,13 +49,15 @@
 
 .main-header-button {
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-header-button-img {
   display: none;
   height: 30px;
   width: 30px;
-  transform: translateX(-4px);
 }
 
 @media screen and (max-width: 800px) {

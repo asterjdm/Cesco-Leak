@@ -64,8 +64,6 @@
   background: url("../../images/stars/star-full.svg");
 }
 
-
-
 .standart-card-stars-text {
   margin-bottom: -10px;
   margin-top: 10px;
@@ -85,7 +83,7 @@
   .standard-card {
     transform: scale(1.4) translateY(70px);
   }
-  .bottom {
+  .main-header-button {
     display: none;
   }
 }
