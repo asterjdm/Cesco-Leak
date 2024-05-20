@@ -83,9 +83,6 @@
   .standard-card {
     transform: scale(1.4) translateY(70px);
   }
-  .main-header-button {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 428px) {
