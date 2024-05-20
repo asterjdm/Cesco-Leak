@@ -3,7 +3,7 @@
   padding-left: 7.5px;
   padding-right: 7.5px;
   box-shadow: var(--border-width) var(--border-width) var(--border-color);
-  font-size: var(--main-font-size)
+  font-size: var(--main-font-size);
   text-align: center;
   text-transform: uppercase;
   color: var(--main-color);

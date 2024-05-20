@@ -55,6 +55,7 @@ main {
 
 .main-footer {
     padding: 10px;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -95,6 +96,10 @@ main {
         grid-template-columns: repeat(1, 1fr);
         width: 250px;
         gap: 195px;
+    }
+
+    .main-footer-button {
+        display: none;
     }
 }
 
