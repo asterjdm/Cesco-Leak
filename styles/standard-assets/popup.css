@@ -87,30 +87,35 @@
   padding: 50px;
   width: 800px;
   height: 600px;
+  overflow-y: scroll;
 }
 
 .standard-popup-content.about h1 {
   font-size: 65px;
-  transform: translateY(-60px);
+  transform: translateY(200px);
 }
 
 .standard-popup-content.about p {
   text-align: justify;
   font-size: 22px;
-  transform: translateY(-50px);
+  transform: translateY(200px);
+}
+
+.standard-popup-content.about span {
+  text-decoration: line-through;
 }
 
 .standard-popup-content.about button {
   font-size: 30px;
-  position: absolute;
-  bottom: 50px;
+  transform: translateY(200px);
 }
+
 .about-link {
   display: flex;
   flex-direction: column;
   gap: 5px;
   font-size: 22px;
-  transform: translateY(-30px);
+  transform: translateY(200px);
 }
 
 .select-image {
@@ -268,11 +273,10 @@
     text-align: left;
     font-size: 5vw;
   }
-  
+
   .standard-popup-content.about button {
     font-size: 5vw;
   }
-
 }
 
 @media screen and (max-width: 675px) {
