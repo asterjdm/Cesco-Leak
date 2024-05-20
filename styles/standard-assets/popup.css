@@ -226,12 +226,12 @@
 
 .welcome-title {
   margin-top: -20px;
-  font-size: 65px;
+  font-size: 55px;
 }
 
 .welcome-text {
   text-align: justify;
-  font-size: var(--main-font-size)
+  font-size: 18px;
 }
 
 .welcome-links {
