@@ -61,24 +61,17 @@ function addTeachers(teachers) {
           <div class="standard-card-stars">
             ${getStarsHtml(
               Math.round(
-                (teacher.teaching_quality +
-                  teacher.kindness +
-                  teacher.authority +
-                  teacher.humor) /
-                  4
+                (teacher.teaching_quality + teacher.kindness + teacher.humor) /
+                  3
               )
             )}
           </div>
 
-          <p class="standart-card-stars-text">Autorité</p>
-          <div class="standard-card-stars">
-            ${getStarsHtml(teacher.authority)}
-          </div>
 
           <p class="standart-card-stars-text">Humour</p>
           <div class="standard-card-stars">${getStarsHtml(teacher.humor)}</div>
 
-          <p class="standart-card-stars-text">Qualité d'enseignement</p>
+          <p class="standart-card-stars-text">Qualité des cours</p>
           <div class="standard-card-stars">
             ${getStarsHtml(teacher.teaching_quality)}
           </div>
