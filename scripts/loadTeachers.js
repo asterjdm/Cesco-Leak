@@ -40,7 +40,7 @@ function addTeachers(teachers) {
             class="standard-card-image"
             src="${teacher.image_url}"
             onerror="this.onerror=null; this.src='images/default.png'"
-            alt=${mdrr[Math.floor(Math.random() * mdrr.length)]}
+            alt="${mdrr[Math.floor(Math.random() * mdrr.length)]}"
           />
           <div class="standard-card-top-right">
             <h1 class="standard-card-name">${teacher.name}</h1>
