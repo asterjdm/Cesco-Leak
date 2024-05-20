@@ -230,6 +230,8 @@
 
 .welcome-links {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
   font-size: var(--main-font-size)
 }
@@ -237,6 +239,41 @@
 .welcome-button {
   font-size: 25px;
 }
+
+@media screen and (max-width: 800px){
+  /* Welcome popup */
+  .standard-popup-whole-section.welcome-popup{
+    height: 100%;
+  }
+
+  .standard-popup-whole-section-content.welcome-popup {
+    width: 100%;
+    height: 100%;
+  }
+
+  .welcome-title {
+    margin-top: -80px;
+    font-size: 10vw;
+  }
+
+  .welcome-text {
+    text-align: left;
+    font-size: 4.5vw;
+  }
+
+  .welcome-links {
+    font-size: 3.8vw;
+  }
+
+  .welcome-button {
+    bottom: 50px;
+    position: absolute;
+    width: calc(100% - 100px);
+    height: 60px;
+    font-size: 4.5vw;
+  }
+}
+
 
 @media screen and (max-width: 1000px) {
   .standard-popup-whole-section.comment-popup,

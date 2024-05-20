@@ -2,7 +2,7 @@
   border: var(--border-width) var(--border-style) var(--border-color);
   border-radius: none;
   padding-left: 4px;
-  font-size: var(--main-font-size)
+  font-size: var(--main-font-size);
   box-shadow: var(--border-width) var(--border-width) var(--border-color);
   text-transform: uppercase;
   color: var(--main-color);
