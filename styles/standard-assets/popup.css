@@ -24,11 +24,11 @@
   animation: fade-out 250ms ease-in-out;
 }
 
-.whole-section {
+.standard-popup-whole-section {
   position: relative;
 }
 
-.standard-popup-content {
+.standard-popup-whole-section-content {
   border: var(--border-width) var(--border-style) var(--border-color);
   position: relative;
   display: flex;
@@ -43,18 +43,18 @@
   background: var(--main-background);
 }
 
-.standard-popup-content.alert {
+.standard-popup-whole-section-content.alert {
   width: 300px;
   height: 100px;
 }
 
-.standard-popup-content.add-popup {
+.standard-popup-whole-section-content.add-popup {
   width: 250px;
   height: 330px;
 }
 
-.standard-popup-content.comment-popup,
-.standard-popup-content.rating-popup {
+.standard-popup-whole-section-content.comment-popup,
+.standard-popup-whole-section-content.rating-popup {
   padding: 20px;
   width: 800px;
   height: 500px;
@@ -83,29 +83,29 @@
   font-size: 16px;
 }
 
-.standard-popup-content.about {
+.standard-popup-whole-section-content.about {
   padding: 50px;
   width: 800px;
   height: 600px;
   overflow-y: scroll;
 }
 
-.standard-popup-content.about h1 {
+.standard-popup-whole-section-content.about h1 {
   font-size: 65px;
   transform: translateY(200px);
 }
 
-.standard-popup-content.about p {
+.standard-popup-whole-section-content.about p {
   text-align: justify;
   font-size: 22px;
   transform: translateY(200px);
 }
 
-.standard-popup-content.about span {
+.standard-popup-whole-section-content.about span {
   text-decoration: line-through;
 }
 
-.standard-popup-content.about button {
+.standard-popup-whole-section-content.about button {
   margin-bottom: 50px;
   font-size: 30px;
   transform: translateY(200px);
@@ -151,12 +151,12 @@
   width: calc(100% - 40px);
 }
 
-.standard-popup-content-messages,
-.standard-popup-content-send-messages {
+.standard-popup-whole-section-content-messages,
+.standard-popup-whole-section-content-send-messages {
   width: 100%;
 }
 
-.standard-popup-content-messages {
+.standard-popup-whole-section-content-messages {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -175,7 +175,7 @@
   text-wrap: nowrap;
 }
 
-.standard-popup-content-send-messages {
+.standard-popup-whole-section-content-send-messages {
   display: flex;
   gap: 20px;
 }
@@ -247,37 +247,37 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .whole-section.comment-popup,
-  .whole-section.rating-popup {
+  .standard-popup-whole-section.comment-popup,
+  .standard-popup-whole-section.rating-popup {
     transform: scale(0.8);
   }
 }
 
 @media screen and (max-width: 850px) {
-  .whole-section.comment-popup,
-  .whole-section.rating-popup {
+  .standard-popup-whole-section.comment-popup,
+  .standard-popup-whole-section.rating-popup {
     transform: scale(0.7);
   }
 }
 
 @media screen and (max-width: 830px) {
-  .standard-popup-content.about {
+  .standard-popup-whole-section-content.about {
     width: 100%;
     height: 100%;
   }
 
-  .standard-popup-content.about h1 {
+  .standard-popup-whole-section-content.about h1 {
     font-size: 10vw;
     transform: translateY(300px);
   }
 
-  .standard-popup-content.about p {
+  .standard-popup-whole-section-content.about p {
     text-align: left;
     font-size: 5vw;
     transform: translateY(300px);
   }
 
-  .standard-popup-content.about button {
+  .standard-popup-whole-section-content.about button {
     font-size: 5vw;
     transform: translateY(300px);
   }
@@ -287,13 +287,13 @@
 }
 
 @media screen and (max-width: 675px) {
-  .whole-section.comment-popup,
-  .whole-section.rating-popup {
+  .standard-popup-whole-section.comment-popup,
+  .standard-popup-whole-section.rating-popup {
     transform: scale(1);
   }
 
-  .standard-popup-content.comment-popup,
-  .standard-popup-content.rating-popup {
+  .standard-popup-whole-section-content.comment-popup,
+  .standard-popup-whole-section-content.rating-popup {
     width: 100dvw;
     height: 100dvh;
     box-shadow: none;
@@ -313,7 +313,7 @@
     height: 45px;
   }
 
-  .standard-popup-content-messages {
+  .standard-popup-whole-section-content-messages {
     margin-top: 75px;
   }
 
@@ -348,7 +348,7 @@
 }
 
 @media screen and (max-width: 521px) {
-  .standard-popup-content.add-popup {
+  .standard-popup-whole-section-content.add-popup {
     width: 100dvw;
     height: 100dvh;
     box-shadow: none;

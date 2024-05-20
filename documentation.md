@@ -12,13 +12,15 @@
     
 # Card
     <div class="standard-card">
-        <!-- Put what you want -->
+        <!-- Insert what you want -->
     </div>
 
 # Popup
     <div class="standard-popup">
-        <div class="whole-section">
+        <div class="standard-popup-whole-section">
             <button class="standard-button standard-popup-close"></button>
-            <div class="standard-popup-content"></div>
+            <div class="standard-popup-whole-section-content">
+                <!-- Insert what you want -->
+            </div>
         </div>
     </div>
