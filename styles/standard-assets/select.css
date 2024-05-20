@@ -13,20 +13,21 @@
     cursor: pointer;
 }
 
+/* Main score select */
 .main-score-select {
   margin: 10px 17px -7px 17px;
   width: calc(100% - 37.5px);
 }
   
 @media screen and (max-width: 521px) {
-  .standard-select {
+  .main-score-select {
     margin-bottom: -25px;
     width: 352px;
   }
 }
 
 @media screen and (max-width: 428px) {
-  .standard-select {
+  .main-score-select {
     margin-bottom: -20px;
     width: 325px;
   }
