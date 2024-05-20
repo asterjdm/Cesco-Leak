@@ -106,6 +106,7 @@
 }
 
 .standard-popup-content.about button {
+  margin-bottom: 50px;
   font-size: 30px;
   transform: translateY(200px);
 }
