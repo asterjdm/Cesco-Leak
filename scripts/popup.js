@@ -25,7 +25,6 @@ function openRatingPopup(popupId, profId) {
       profId,
       parseFloat(document.getElementById("ratingTeachingQuality").value),
       parseFloat(document.getElementById("ratingKindness").value),
-      parseFloat(document.getElementById("ratingAuthority").value),
       parseFloat(document.getElementById("ratingHumor").value)
     ).then(() => {
       closePopup(popupId);

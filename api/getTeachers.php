@@ -14,13 +14,13 @@ $sort = $db->escapeStrings($_GET["sort"]);
 function compareTeachers($a, $b, $sort)
 {
     if ($sort == "best_score") {
-        return $b["teaching_quality"] + $b["kindness"] + $b["authority"] + $b["humor"] - $a["teaching_quality"] - $a["kindness"] - $a["authority"] - $a["humor"];
+        return $b["teaching_quality"] + $b["kindness"] + $b["humor"] - $a["teaching_quality"] - $a["kindness"]  - $a["humor"];
     } elseif ($sort == "most_votes") {
         return $b["votes_count"] - $a["votes_count"];
     } elseif ($sort  == "least_votes") {
         return $a["votes_count"] - $b["votes_count"];
     } elseif ($sort == "worst_score") {
-        return $a["teaching_quality"] + $a["kindness"] + $a["authority"] + $a["humor"] - $b["teaching_quality"] - $b["kindness"] - $b["authority"] - $b["humor"];
+        return $a["teaching_quality"] + $a["kindness"]  + $a["humor"] - $b["teaching_quality"] - $b["kindness"]  - $b["humor"];
     }
 }
 
@@ -38,7 +38,6 @@ foreach ($teachers as &$teacher) {
 
     $teachingQualityTotal = 0;
     $kindnessTotal = 0;
-    $authorityTotal = 0;
     $humorTotal = 0;
 
     $votesCount = 0;
@@ -46,7 +45,6 @@ foreach ($teachers as &$teacher) {
         $votesCount++;
         $teachingQualityTotal += $vote["teaching_quality"];
         $kindnessTotal += $vote["kindness"];
-        $authorityTotal += $vote["authority"];
         $humorTotal += $vote["humor"];
     }
 
@@ -54,7 +52,6 @@ foreach ($teachers as &$teacher) {
     $teacher["votes_count"] = $votesCount;
     $teacher["teaching_quality"] = ($votesCount > 0) ? $teachingQualityTotal / $votesCount : 0;
     $teacher["kindness"] = ($votesCount > 0) ? $kindnessTotal / $votesCount : 0;
-    $teacher["authority"] = ($votesCount > 0) ? $authorityTotal / $votesCount : 0;
     $teacher["humor"] = ($votesCount > 0) ? $humorTotal / $votesCount : 0;
 }
 
