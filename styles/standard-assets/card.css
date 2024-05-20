@@ -65,7 +65,8 @@
 }
 
 .standart-card-stars-text {
-  margin-bottom: -15px;
+  margin-bottom: -10px;
+  margin-top: 10px;
   transform: translateX(-1px);
   font-size: 17px;
   text-transform: uppercase;

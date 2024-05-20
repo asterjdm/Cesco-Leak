@@ -10,6 +10,6 @@ async function sendVotes(profId, teachingQuality, kindness, humor) {
   });
   let responseJson = await response.json();
   if (responseJson.info == "vote updated") {
-    alert("Votre vote a été mis a jour");
+    openPopup("alertPopup");
   }
 }
