@@ -1,7 +1,7 @@
 function openPopup(id) {
-  document.body.style.overflow = "hidden";
   const popup = document.getElementById(id);
   popup.classList.add("show");
+  document.body.style.overflow = "hidden";
 }
 
 function recreateNode(el, withChildren) {

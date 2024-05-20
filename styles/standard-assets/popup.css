@@ -44,7 +44,7 @@
 }
 
 
-.standard-popup-whole-section-content.add-popup {
+.standard-popup-whole-section-content.add-teacher-popup {
   width: 250px;
   height: 330px;
 }
@@ -200,6 +200,7 @@
   font-size: 25px;
 }
 
+
 /* Alert Popup */
 .standard-popup-whole-section-content.alert-popup {
   padding: 10px;
@@ -238,7 +239,7 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  font-size: var(--main-font-size)
+  font-size: var(--main-font-sizealertPopup)
 }
 
 .welcome-button {
@@ -357,7 +358,7 @@
 }
 
 @media screen and (max-width: 521px) {
-  .standard-popup-whole-section-content.add-popup {
+  .standard-popup-whole-section-content.add-teacher-popup {
     width: 100dvw;
     height: 100dvh;
     box-shadow: none;
