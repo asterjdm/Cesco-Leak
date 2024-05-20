@@ -9,8 +9,12 @@
 }
 
 :root {
+    /* Colors */
     --main-background: #000000;
     --main-color: #FFFFFF;
+
+    /* Text */
+    --main-font-size: 20px;
 
     /* Fonts */
     --main-font: "SpaceGrotesk";
@@ -59,7 +63,7 @@ main {
 }
 
 .main-footer-text {
-    font-size: 20px;
+    font-size: var(--main-font-size)
 }
 
 

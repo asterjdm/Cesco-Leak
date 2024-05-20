@@ -162,7 +162,7 @@
 }
 
 .score-title {
-  font-size: 20px;
+  font-size: var(--main-font-size)
 }
 
 .value {
@@ -202,12 +202,39 @@
 }
 
 .score-value p {
-  font-size: 20px;
+  font-size: var(--main-font-size);
   width: 15px;
 }
 
 .save-ratings {
   width: 617px;
+  font-size: 25px;
+}
+
+/* Welcome popup */
+.standard-popup-whole-section-content.welcome-popup {
+  padding: 50px;
+  width: 700px;
+  height: 500px;
+}
+
+.welcome-title {
+  margin-top: -20px;
+  font-size: 65px;
+}
+
+.welcome-text {
+  text-align: justify;
+  font-size: var(--main-font-size)
+}
+
+.welcome-links {
+  display: flex;
+  gap: 30px;
+  font-size: var(--main-font-size)
+}
+
+.welcome-button {
   font-size: 25px;
 }
 
@@ -323,7 +350,7 @@
   .standard-button.send-message,
   .standard-input.send-message {
     height: 60px;
-    font-size: 20px;
+    font-size: var(--main-font-size)
   }
 
   .message {
